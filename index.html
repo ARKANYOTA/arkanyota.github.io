@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ArkanYota</title>
+    <link rel="stylesheet" type="text/css" href="scss/index.css" media="screen" />
+</head>
+
+<body>
+    <!--Hey! This is the original version of Simple CSS Waves
+        by https://codepen.io/goodkatz/pen/LYPGxQz?editors=1100 -->
+    <div class="header">
+        <!--Content before waves-->
+        <div class="inner-header flex">
+            <h1>ArkanYota</h1>
+            <a href="bravepage/bravepage.html">Page</a>
+        </div>
+        <!--Waves Container-->
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(18,17,19,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(18,17,19,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(18,17,19,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(18,17,19,1)" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+        <div class="Projects">
+            <div class="">Hello</div>
+        </div>
+        <div class="Contacts" id="contact">
+            <div class="circlecontainer">
+                <div class="circle flex floating-circle" id="Discordo">Discordo</div>
+                <div class="circle flex floating-circle" id="Insta">Insta</div>
+                <div class="circle flex floating-circle" id="Google">Google</div>
+                <div class="circle flex floating-circle" id="github">github</div>
+            </div>
+            <div class="inner-contact flex"><h1>Contact</h1></div>
+
+        </div>
+    </div>
+    <!--Header ends-->
+    </div>
+
+
+</body>
+<script>
+    function refreshall(){
+        var t = 1000; // rafraîchissement en millisecondes
+        setTimeout('refresh()',t)        
+    }
+    function refresh(){
+        refreshall()
+    }
+    
+    function poscircle(){
+        console.log(window.innerWidth)
+        var elements = document.getElementsByClassName('floating-circle');
+        elementsLength = elements.length;  
+        for (var i = 0 ; i < elementsLength ; i++) {
+            //hei = Math.floor(Math.random() * (window.innerHeight-130))
+            //wid = Math.floor(Math.random() * (window.innerWidth-130))
+            hei = Math.floor(window.innerHeight/2)
+            wid = Math.floor(window.innerWidth*((i)/4)+(window.innerWidth/8)-65)
+            document.getElementById(elements[i].id).style.left = wid+"px";
+            document.getElementById(elements[i].id).style.bottom = hei+"px";
+        }
+    }
+    poscircle()
+    refresh()
+</script>
+</html>

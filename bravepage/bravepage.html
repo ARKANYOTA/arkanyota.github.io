@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <div class="Heure">
+        <p id="heure">00:00:00</p>
+    </div>
+    <div class="Date">
+        <p id="date">00:00:00</p>
+    </div>
+</body>
+<script>
+    // REFRESH
+    console.log("TODO: Heure, Date, Commun link, bar de recherche?(Heure de plusiers pays) ?(Github push, Github most visited link) ?(i3Bar, Cpu...)")
+    function refreshHour(){
+        var t = 1000; // rafraîchissement en millisecondes
+        setTimeout('showHour()',t)        
+    }
+    function refreshDate(){
+        var t = 1000;
+        setTimeout('showDate()',t)
+    }
+    // HEURE
+    function showHour() {
+        var date = new Date()
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        if( h < 10 ){ h = '0' + h; }
+        if( m < 10 ){ m = '0' + m; }
+        if( s < 10 ){ s = '0' + s; }
+        var time = h + ':' + m + ':' + s
+        document.getElementById('heure').innerHTML = time;
+        refreshHour()
+    }
+    // Fin HEURE
+    // DATE
+    function showDate() {
+        var date = new Date()
+        var y = date.getFullYear(); //(2021)
+        var d = date.getDate(); // (0-31)
+        var day = date.getDay(); // 0: Monday, 1
+        var m = date.getMonth(); // 0: Janvier, 1
+        dlist=["Dimanche", "Lundi", "Mardi", "Mercedi", "Jeudi", "Vendredi", "Samedi"]
+        mlist=["décembre", "janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre"]
+
+
+        var time = dlist[day] + ' ' + d + ' ' + mlist[m] + ' ' + y
+        document.getElementById('date').innerHTML = time;
+        refreshDate()
+    }
+    // Fin DATE
+    showHour()
+    showDate()
+</script>
+</html>
