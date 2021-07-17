@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <title>ArkanYota</title>
@@ -53,7 +53,7 @@
 </body>
 <script>
     function refreshall(){
-        var t = 1000; // rafraîchissement en millisecondes
+        const t = 1000; // rafraîchissement en milliseconds
         setTimeout('refresh()',t)        
     }
     function refresh(){
@@ -62,15 +62,17 @@
     
     function poscircle(){
         console.log(window.innerWidth)
-        var elements = document.getElementsByClassName('floating-circle');
-        elementsLength = elements.length;  
-        for (var i = 0 ; i < elementsLength ; i++) {
+        const elements = document.getElementsByClassName('floating-circle');
+        const elementsLength = elements.length;
+        let hei;
+        let wid;
+        for (let i = 0; i < elementsLength; i++) {
             //hei = Math.floor(Math.random() * (window.innerHeight-130))
             //wid = Math.floor(Math.random() * (window.innerWidth-130))
-            hei = Math.floor(window.innerHeight/2)
-            wid = Math.floor(window.innerWidth*((i)/4)+(window.innerWidth/8)-65)
-            document.getElementById(elements[i].id).style.left = wid+"px";
-            document.getElementById(elements[i].id).style.bottom = hei+"px";
+            hei = Math.floor(window.innerHeight / 2)
+            wid = Math.floor(window.innerWidth * ((i) / 4) + (window.innerWidth / 8) - 65)
+            document.getElementById(elements[i].id).style.left = wid + "px";
+            document.getElementById(elements[i].id).style.bottom = hei + "px";
         }
     }
     poscircle()
