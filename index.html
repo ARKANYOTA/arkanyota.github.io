@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
 <body onload="load_page()">
     <div class="page page1">
-        <img src="./images/ay_logo3.png" class="page1-bg-img" >
+        <img src="./images/ay_logo3.png" class="page1-bg-img">
         <h1 id="home">ARKANYOTA</h1>
 
         <div class="menu2" id="menu2">
             <h2>
                 <img class="image" src="./icons/home.svg" alt="Home">
-                <a onclick="menu_goto('home')" class="a-menu">Home</a>
+                <a href="#home" class="a-menu">Home</a>
             </h2>
             <h2>
                 <img class="image" src="./icons/flag.svg" alt="Flag">
-                <a onclick="menu_goto('write-ups')" class="a-menu">Write Ups</a>
+                <a href="#write-ups" class="a-menu">Write Ups</a>
             </h2>
             <h2>
                 <img class="image" src="./icons/code.svg" alt="Code">
-                <a onclick="menu_goto('codes')" class="a-menu">Codes</a>
+                <a href="#codes" class="a-menu">Codes</a>
             </h2>
             <h2>
                 <img class="image" src="./icons/sports_esports.svg" alt="Games">
-                <a onclick="menu_goto('games')" class="a-menu">Games</a>
+                <a href="#games" class="a-menu">Games</a>
             </h2>
             <h2>
                 <img class="image" src="./icons/badge.svg" alt="AboutMe">
-                <a onclick="menu_goto('about-me')" class="a-menu">About Me</a>
+                <a href="#about-me" class="a-menu">About Me</a>
             </h2>
         </div>
     </div>
-    <div class="page page3">
-        <h2 id="write-ups" class="title">Write ups</h2>
-        <div class="text3">
-            <p>
-                J'ai pour le moment fait que le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr"><strong>Direction Générale de la Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/"><strong>Télécom SudParis</strong></a></br>
-                Le <a href="https://www.404ctf.fr/"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup> sur 2&nbsp;460 au classement avec 18859 points.</br></br>
-                <a href="https://github.com/ARKANYOTA/write-ups/blob/main/404CTF/index.md"><strong>Write-Ups: ICI</strong></a>
-            </p>
+    <div class="not-home">
+        <div class="page page3">
+            <h2 id="write-ups" class="title">Write ups</h2>
+            <div class="text3">
+                <p>
+                    J'ai pour le moment fait que le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr"><strong>Direction Générale de la Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/"><strong>Télécom SudParis</strong></a></br>
+                    Le <a href="https://www.404ctf.fr/"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup> sur 2&nbsp;460 au classement avec 18859 points.</br></br>
+                    <a href="https://github.com/ARKANYOTA/write-ups/blob/main/404CTF/index.md"><strong>Write-Ups: ICI</strong></a>
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="page page3">
-        <h2 id="codes" class="title">Codes</h2>
-        <div class="menu2">
+        <div class="page page3">
+            <h2 id="codes" class="title">Codes</h2>
         </div>
-    </div>
-    <div class="page page4">
-        <h2 id="games" class="title">Games</h2>
-        <div class="menu2">
+        <div class="page page4">
+            <h2 id="games" class="title">Games</h2>
         </div>
-    </div>
-    <div class="page page5">
-        <h2 id="about-me" class="title">About me</h2>
-        <div class="menu2">
+        <div class="page page5">
+            <h2 id="about-me" class="title">About me</h2>
         </div>
     </div>
     <div class="options">
