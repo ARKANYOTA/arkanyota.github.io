@@ -1,1 +1,0 @@
-# arkanyota.github.io
