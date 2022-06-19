@@ -1,13 +1,25 @@
+:root:not(.light) {
+    --main-color: #fff;
+    --back-color: #000;
+    --text-color: #c1121f;
+}
+
+:root.light {
+    --main-color: #000;
+    --back-color: #e5e5e5;
+    --text-color: #8b0000;
+}
 html, body {
     margin: 0;
     padding: 0;
     /*overflow: hidden; /* Hide scrollbars */
     user-select : none;
     scroll-behavior: smooth;
+    color: var(--text-color);
 
 }
 body {
-    background-color: black;
+    background-color: var(--back-color);
     font-family: Verdana, sans-serif;
     font-size: 100%;
     overflow: auto;
@@ -16,21 +28,21 @@ body {
 h1 {
     padding: 30px;
     margin: 0;
-    color: white;
+    color: var(--main-color);
     text-align: center;
-    text-shadow: 3px 3px #902023;
+    text-shadow: 3px 3px var(--text-color);
     font-size: 3rem;
     user-select : text;
 
 }
 h2 {
-    color: white;
+    color: var(--main-color);
     font-size: 1.5rem;
-    text-shadow: 3px 3px #902023;
+    text-shadow: 3px 3px var(--text-color);
 }
 p {
     user-select: text;
-    color: white;
+    color: var(--main-color);
 }
 .a-menu {
     user-select: text;
@@ -45,8 +57,8 @@ p {
     margin-left: 8px;
 }
 a {
-    color: white;
-    text-shadow: 1px 1px #902023;
+    color: var(--main-color);
+    text-shadow: 1px 1px var(--text-color);
 }
 .options {
     position: fixed;
@@ -61,7 +73,7 @@ a {
     width: 20px;
 }
 .page {
-    background-color: black;
+    background-color: var(--back-color);
     height: 100vh;
     margin-left: 50px;
 }
@@ -86,7 +98,7 @@ a {
     padding: 30px;
     margin: 0;
     text-align: center;
-    text-shadow: 3px 3px #902023;
+    text-shadow: 3px 3px var(--text-color);
     user-select : text;
 }
 
