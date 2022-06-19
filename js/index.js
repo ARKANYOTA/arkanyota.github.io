@@ -39,6 +39,24 @@ function load_page(){
         document.getElementById('menu2').style.transform = 'translate(0, -50%)';
     }
 })*/
+
+function isLight() {
+    return localStorage.getItem("light-mode");
+}
+
+function toggleRootClass() {
+    document.querySelector(":root").classList.toggle("light");
+}
+
+function toggleLocalStorageItem() {
+    if (isLight()) {
+        localStorage.removeItem("light-mode");
+    } else {
+        localStorage.setItem("light-mode", "set");
+    }
+}
+
+
 function load_page() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -65,4 +83,12 @@ function load_page() {
         duration: 1,
         opacity: 0,
     })
+    if (isLight()) {
+        toggleRootClass();
+    }
+
+    document.querySelector(".theme-icon").addEventListener("click", () => {
+        toggleLocalStorageItem();
+        toggleRootClass();
+    });
 }
