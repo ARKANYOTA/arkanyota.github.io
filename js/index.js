@@ -61,8 +61,29 @@ function load_page() {
             end: "top 20%",
             toggleActions: "play reverse play reverse"
         },
-        rotation: 180,
+        rotation: 360,
         duration: 1,
         opacity: 0,
+    })
+    /*gsap.to(".page2-bg-img", {
+        scrollTrigger: {
+            trigger: ".not-home",
+            scrub: true,
+            end: "top 20%",
+            toggleActions: "play reverse play reverse"
+        },
+        duration: 1,
+        opacity: 0,
+    })*/
+    gsap.to(".a-menu", {
+        scrollTrigger: {
+            trigger: ".not-home",
+            scrub: true,
+            end: "top 20%",
+            toggleActions: "play reverse play reverse",
+        },
+        opacity: 0.1,
+        duration: 1,
+        display: "none"
     })
 }
