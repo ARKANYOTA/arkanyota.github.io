@@ -9,6 +9,32 @@
     --back-color: #e5e5e5;
     --text-color: #8b0000;
 }
+
+:root:not(.light) .theme-icon .fa-sun {
+    display: none;
+}
+
+:root:not(.light) .theme-icon .fa-moon {
+    display: inline-block;
+    color: white;
+}
+
+:root.light .theme-icon .fa-sun {
+    display: inline-block;
+}
+
+:root.light .theme-icon .fa-moon {
+    display: none;
+}
+
+.image {
+    height: 20px;
+    width: 20px;
+}
+:root:not(.light) .image {
+    filter: invert();
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -67,11 +93,6 @@ a {
     top: 10px;
 }
 
-.image {
-    filter: invert();
-    height: 20px;
-    width: 20px;
-}
 .page {
     background-color: var(--back-color);
     height: 100vh;
