@@ -113,3 +113,4 @@ function load_page() {
         toggleRootClass();
     });
 }
+
