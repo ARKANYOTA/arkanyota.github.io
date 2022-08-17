@@ -35,6 +35,10 @@
     filter: invert();
 }
 
+:root:not(.light) .contact-img{
+    filter: invert();
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -142,18 +146,23 @@ p {
 .games {
     position: absolute;
     top: 350%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) ;
     border: var(--text-color);
 }
 
 .game1 {
     left: 25%;
+    transform: rotate(5deg) translate(-50%, -50%);
 }
 .game2 {
     left: 50%;
+    transform: rotate(-3deg) translate(-50%, -50%);
+
 }
 .game3 {
     left: 75%;
+    transform: rotate(8deg) translate(-50%, -50%);
+
 }
 .cadre-image {
     border: white 1px solid;
@@ -198,9 +207,9 @@ a {
     margin-bottom: 2px;
 }
 
+
 .contact-img {
     width: 100px;
-    filter: invert();
     display: block;
     margin-left: auto;
     margin-right: auto;
