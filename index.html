@@ -6,6 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/page5.css">
+    <link rel="stylesheet" href="./css/page3.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="./js/index.js"></script>
@@ -15,8 +17,6 @@
 <body onload="load_page()">
     <div class="page page1">
         <img src="./images/ay_logo3.png" class="page1-bg-img">
-        <!--<img src="./images/ay_logo3.1.png" class="page2-bg-img">
-        <img src="./images/ay_logo3.2.png" class="page1-bg-img">-->
         <h1 id="home">ARKANYOTA</h1>
 
         <div class="menu2" id="menu2">
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="not-home">
-        <div class="page page3">
+        <div class="page page2">
             <h2 id="write-ups" class="title">Write ups</h2>
             <div>
                 <p class="text3">
@@ -73,12 +73,50 @@
         </div>
         <div class="page page3">
             <h2 id="codes" class="title">Codes</h2>
-            <div>
-                <div>
-                    <p>Projet 1</p>
+            <div class="codes">
+                <div class="codes-list">
+                    <ul>
+                        <li onclick="change_codes_box(1)">Venal</li>
+                        <li onclick="change_codes_box(2)">Project 2</li>
+                    </ul>
                 </div>
-                <div>
-                    <p>Projet 2</p>
+                <div class="codes-preview">
+                    <div class="box-preview">
+                        <!--<div id="mesuer"></div>-->
+                        <div class="box-preview-elt project1" id="project1">
+                            <div class="code-image-container">
+                                <img src="./images/code-venal.png" alt="venal illustration" class="code-image">
+                            </div>
+                            <p class="code-title">
+                                Venal
+                            </p>
+                            <p class="code-desc">
+                                Vlc player on terminal.
+                            </p>
+                        </div>
+                        <div class="box-preview-elt project2" id="project2" style="display: none">
+                            <div class="code-image-container">
+                                <img src="./images/joffre.png" alt="joffre illustration" class="code-image">
+                            </div>
+                            <p class="code-title">
+                                Joffre
+                            </p>
+                            <p class="code-desc">
+                                Lycée Joffre.
+                            </p>
+                        </div>
+                        <div class="box-preview-elt project3" id="project3" style="display: none">
+                            <img src="./images/joffre.png" alt="404ctf">
+                        </div>
+                        <div class="box-preview-elt project4" id="project4" style="display: none">
+                            <img src="./images/joffre.png" alt="404ctf">
+                        </div>
+                        <div class="minion">
+                            <div id="right-eye"><img class="eye" src="images/eye.png" alt="eye"/></div>
+                            <div id="left-eye"><img class="eye" src="images/eye.png" alt="eye"/></div>
+                            <img src="./images/minion.png" alt="minion" class="minion-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,32 +166,38 @@
            <div class="aboutme-grid">
                 <h2 id="about-me" class="title aboutme-title">About me</h2>
                 <div class="aboutme-desc aboutme-box">
-                    actuelement en vaccances
-
+                    ... <!--TODO-->
                 </div>
-                <div class="aboutme-path aboutme-box">
-                    <div class="education" id="joffre">
-                        <p class="education-name">CPGE Joffre</p>
-                        <p class="education-degree">Baccalauréat, Informatics</p>
-                        <p class="education-duree">Sep 2019 - Jul 2022</p>
-                        <p class="education-grade">Grade: 2nd, 1re, Tle</p>
-                    </div>
-                    <div class="education" id="joffre">
-                        <p class="education-name">CPGE Joffre</p>
-                        <p class="education-degree">Baccalauréat, Informatics</p>
-                        <p class="education-duree">Sep 2019 - Jul 2022</p>
-                        <p class="education-grade">Grade: 2nd, 1re, Tle</p>
-                    </div>
 
+               <div class="aboutme-path aboutme-box">
                     <div class="education" id="joffre">
-                        <p class="education-name">CPGE Joffre</p>
-                        <p class="education-degree">Baccalauréat, Informatics</p>
-                        <p class="education-duree">Sep 2019 - Jul 2022</p>
-                        <p class="education-grade">Grade: 2nd, 1re, Tle</p>
+                        <img src="images/joffre.png" alt="joffre" class="education-image-image"/>
+                        <div class="education-text">
+                            <p class="education-name">Lycée Joffre</p>
+                            <p class="education-degree">Baccalauréat, Informatics</p>
+                            <p class="education-duree">Sep 2019 - Jul 2022</p>
+                            <p class="education-grade">Grade: 2nd, 1re, Tle</p>
+                        </div>
                     </div>
-
+                    <div class="education" id="thiers">
+                        <img src="images/thiers.jpg" alt="thiers" class="education-image-image"/>
+                        <div class="education-text">
+                            <p class="education-name">CPGE Thiers</p>
+                            <p class="education-degree">Grande école</p>
+                            <p class="education-duree">Sep 2022 - Jul 2024</p>
+                            <p class="education-grade">Grade: Prépa</p>
+                        </div>
+                    </div>
+                    <!--
+                        <div class="education" id="polytech-nice">
+                            <p class="education-name">Polytech'Nice</p>
+                            <p class="education-degree">Ingénieur</p>
+                            <p class="education-duree">Sep 2022 - Jul 2025</p>
+                            <p class="education-grade">Grade: Bac+2 to Bac+5</p>
+                        </div>
+                    -->
                 </div>
- 
+
           </div>
 
         </div>
@@ -193,14 +237,7 @@
             <img class="image fa-sun" src="./icons/light_mode.svg" alt="LightMode">
             <img class="image fa-moon" src="./icons/dark_mode.svg" alt="DarkMode">
         </a>
-        <!--<dark-mode-toggle
-                id="dark-mode-toggle-1"
-                legend="Theme Switcher"
-                appearance="toggle"
-                remember="a"
-        ></dark-mode-toggle>-->
 
     </div>
-
 </body>
 </html>

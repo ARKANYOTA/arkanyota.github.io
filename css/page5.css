@@ -1,0 +1,35 @@
+.education {
+    background-color: #FF4365;
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.education-image-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    float: left;
+    margin-left: 30px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.education-text{
+    text-align:right;
+    float:right;
+    margin-right: 30px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#joffre{
+    grid-area: 1 / 1 / 2 / 2;
+}
+#thiers{
+    grid-area: 1 / 2 / 2 / 3;
+}
