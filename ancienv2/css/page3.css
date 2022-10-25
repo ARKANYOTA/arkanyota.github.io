@@ -19,9 +19,8 @@
     height: 100%;
 }
 .box-preview {
-    height: 80%;
-    width: 80%;
-    border-radius: 60px;
+    height: 700px;
+    width: 700px;
     background-color: #FF4365;
     position: relative;
     margin-left: auto;
@@ -31,7 +30,6 @@
 }
 
 .code-image {
-    border-radius: 10px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -41,15 +39,17 @@
     height: 100%;
     position: static;
     overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
 }
 
 
-/* Minion */
+/* character */
 .eye {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
-#mesuer{
+/*#mesuer{
     position: absolute;
     border: red 1px solid;
     left: calc(85px - 20px);
@@ -57,19 +57,10 @@
     width: 40px;
     z-index: 100;
     transform: rotate(-30deg);
-}
-
-/*
-#mesuer{
-    position: absolute;
-    border: red 1px solid;
-    left: calc(0px - 20px);
-    top: 0px;
-    width: 40px;
-    z-index: 100;
-    transform: rotate(-30deg);
 }*/
-.minion{
+
+/*Transition on the scale TODO*/
+#character{
     position: absolute;
     left: 50px;
     top: 0px;
@@ -82,23 +73,33 @@
     height: 24px;
     z-index: 120;
     transform: rotate(-30deg);
-    top: 40px;
 }
-#left-eye{
-    left: calc(26px);
-    /*left: calc(88px - 12px - 69px);*/
-}
-#right-eye{
-    left: calc(26px + 30px);
-    /*left: calc(118px - 12px);*/
-}
-.box-preview-elt:hover ~ .minion{
-    top: -80px;
-}
-.minion-img{
+.character-img{
     width: 100px;
     position: relative;
 }
 
+.code-title {
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+}
+.code-title-title {
+    margin: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.code-title-repo {
+    padding-right: 10px;
+}
+.slash{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 

@@ -1,0 +1,430 @@
+:root {
+    --main-color: #c62828;
+    --scondary-color: #EC4D37;
+    --back-color: #000000;
+    --text-color: #ffffff;
+    --icon-color: #ff5f52;
+}
+
+/*:root:not(.light) {
+    --main-color: #fff;
+    --back-color: #000;
+    --text-color: #c1121f;
+}
+
+:root.light {
+    --main-color: #000;
+    --back-color: #e5e5e5;
+    --text-color: #8b0000;
+}*/
+
+/*Debug*/
+
+/* Main */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: var(--back-color);
+}
+a {
+    text-decoration: none;
+    color: var(--scondary-color);
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: var(--text-color);
+}
+
+h2 {
+    text-shadow: var(--main-color) 2px 2px 4px;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-shadow: #121113 2px 2px 2px;
+}
+
+.nav-text {
+    vertical-align: middle;
+}
+.nav-image {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    padding: 12px;
+    text-shadow: none;
+    text-decoration: none;
+    filter: invert();
+}
+
+/* All pages */
+.page{
+    height: 100vh;
+    padding-left: 64px;  /* 64px = 32px (nav-image) + 32px (margin) */
+}
+
+
+
+.page > h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 10px;
+}
+
+.page > h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Home page */
+#home > .page-content > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 0;
+}
+
+@media (max-width: 800px) {
+    #home > .page-content > img {
+        width: 30vw;
+    }
+}
+
+
+/* Flag page */
+#flag > .page-content {
+    height: calc(100vh - 64px);
+}
+#flag > .page-content > p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+
+}
+
+/* Code page */
+#code > .page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: calc(100vh - 64px);
+}
+
+#code > .page-content > .code-preview {
+    position: relative;
+}
+
+#code > .page-content > .code-preview > article {
+    width: 60vw;
+    border-radius: 9px;
+    position: relative;
+    z-index: 2;
+
+}
+#code > .page-content > .code-preview > article[data-status="inactive"] {
+    display: none;
+}
+
+#code > .page-content > .code-preview > article > .container {
+    position: static;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#code > .page-content > .code-preview > article > .container > .illustration {
+    width: 100%;
+}
+
+#code > .page-content > .code-preview > article > .container:hover{
+
+}
+
+#code > .page-content > .code-preview > article > h3 {
+    position: absolute;
+    bottom: 40px;
+    left: 16px;
+    padding: 10px;
+    color: var(--back-color);
+    text-shadow: var(--main-color) 2px 2px 2px;
+
+}
+
+#code > .page-content > .code-preview > article > p{
+    position: absolute;
+    bottom: 16px;
+    padding: 10px;
+    left: 32px;
+    color: var(--back-color);
+    text-shadow: var(--main-color) 2px 2px 2px;
+}
+
+#code > .page-content > .code-preview > article > a > .github-link {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 5;
+    width: 48px;
+}
+
+
+
+
+#character {
+    position: absolute;
+    top: 0px;
+    transition: 1s ease;
+    z-index: 0;
+}
+
+#character-img {
+     position: absolute;
+}
+
+#character > .eye-container {
+     position: absolute;
+    z-index: 1;
+}
+
+#left-eye-img, #right-eye-img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px){
+    #character{
+        display: none;
+    }
+}
+
+
+#game-left-button, #game-right-button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    filter: invert();
+    z-index: 4;
+}
+#game-left-button > img, #game-right-button > img{
+    width: 24px;
+    padding: 12px;
+}
+#game-left-button {
+    left: 0;
+    background: linear-gradient(to left, transparent, #fff);
+}
+#game-right-button {
+    right: 0;
+    background: linear-gradient(to left,  #fff, transparent);
+}
+
+/* Games Page */
+#game > .page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: calc(100vh - 64px);
+    gap: 20px;
+    padding: 30px;
+}
+
+@media (max-width: 700px) {
+    #game > .page-content {
+        flex-direction: row;
+        gap: 100px;
+    }
+    .page:nth-child(4){  /*Games*/
+        height: 1200px;
+    }
+}
+
+#game > .page-content > div {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game > .page-content > .games{
+    background-color: var(--text-color);
+    width: 260px;
+    height: auto;
+    text-align: center;
+    border-radius: 3px;
+}
+
+#game > .page-content > .games > a > .image {
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px 0;
+    padding: 20px;
+}
+
+#game > .page-content > .games > a > #anchorsMiners-image{
+    background: #7E2553;
+}
+#game > .page-content > .games > a > #chaserOfDawn-image{
+    background: black;
+}
+#game > .page-content > .games > a > #Octoboom-image{
+    background: rgb(85,98,180);
+    background: linear-gradient(9deg, rgba(85,98,180,1) 0%, rgba(99,155,255,1) 100%);
+}
+
+span.game-title {
+    color: var(--back-color);
+    padding-bottom: 10px;
+    vertical-align: 5px;
+    font-weight: bold;
+}
+
+#game1{
+    transform: rotate(3deg);
+}
+#game2{
+    transform: rotate(-5deg);
+}
+#game3{
+    transform: rotate(8deg);
+}
+
+/* About page */
+#about > .page-content {
+    height: calc(100vh - 64px);
+}
+#about > .page-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#about > .page-content > .description {
+    height: 50%;
+}
+#about > .page-content > .description > p {
+}
+
+#about > .page-content > .path {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 50%;
+}
+
+#about > .page-content > .path > .education {
+    background-color: var(--main-color);
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 9px;
+    margin: 0 auto;
+}
+
+#about > .page-content > .path > .education > img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+    float: left;
+    margin: 0 auto 0 30px;
+}
+
+#about > .page-content > .path > .education > .text {
+    text-align:right;
+    float:right;
+    margin-right: 30px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+/* Contact page */
+#contact {
+    background: linear-gradient(var(--back-color), var(--main-color));
+}
+
+#contact > .page-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: calc(100vh - 2em - 25px);
+}
+
+@media (max-width: 768px) {
+    #contact > .page-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        align-items: center;
+        align-self: center;
+        width: 100%;
+        height: calc(100vh - 2em - 25px);
+    }
+
+}
+@media (max-width: 366px) {
+    #contact > .page-content {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+
+}
+#contact > .page-content > a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+#contact > .page-content > a > .contact-img {
+    width: 100px;
+    padding-bottom: 10px;
+    filter: invert();
+}
+
+#contact > .page-content > a:hover {
+    transform: translate(0px, -20px);
+}
+
