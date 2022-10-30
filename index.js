@@ -223,7 +223,7 @@ function load_magnifier_code_image() {
     let x = 0;
     let y = 0;
 
-    const elements = Personnages.minion // [Personnages.morty, Personnages.minion][randInt(0, 1)];
+    const elements = [Personnages.morty, Personnages.minion][randInt(0, 1)];
     const character = document.getElementById("character");
     changeCharacter(elements)
 
