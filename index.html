@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
@@ -21,12 +22,6 @@
                 </a>
             </li>
             <li>
-                <a href="#flag">
-                    <img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag">
-                    <span class="nav-text">Write Ups</span>
-                </a>
-            </li>
-            <li>
                 <a href="#code">
                     <img class="nav-image" src="icons/nav-icons/code.svg" alt="Code">
                     <span class="nav-text">Codes</span>
@@ -36,6 +31,12 @@
                 <a href="#game">
                     <img class="nav-image" src="icons/nav-icons/game.svg" alt="Game">
                     <span class="nav-text">Games</span>
+                </a>
+            </li>
+            <li>
+                <a href="#flag">
+                    <img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag">
+                    <span class="nav-text">Write Ups</span>
                 </a>
             </li>
             <li>
@@ -57,18 +58,6 @@
             <h1>ARKANYOTA</h1>
             <div class="page-content">
                 <img src="images/home/ay_logo3.png" class="page1-bg-img" alt="Background image">
-            </div>
-        </section>
-        <section id="flag" class="page">
-            <h2>Write ups</h2>
-            <div class="page-content">
-                <p>
-                    Je n'ai pour le moment fait que le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr" class="link"><strong>Direction Générale de la Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/" class="link"><strong>Télécom SudParis</strong></a>
-                    </br>
-                    Le <a href="https://www.404ctf.fr/" class="link"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup> sur 2&nbsp;460 au classement avec 18859 points.
-                    </br>
-                    <a href="https://github.com/ARKANYOTA/write-ups/blob/main/404CTF/index.md" class="link"><strong>Write-Ups: ICI</strong></a>
-                </p>
             </div>
         </section>
         <section id="code" class="page">
@@ -120,39 +109,45 @@
         <section id="game" class="page">
             <h2>Game</h2>
             <div class="page-content">
-                <div class="games" id="game1">
-                    <a href="https://yolwoocle.itch.io/anchorsandminers">
-                        <img src="images/games/logo-anchorsMiners.png" alt="anchorsMiners" class="image" id="anchorsMiners-image">
-                        <p class="cadre-image-titre cadre-titre">
-                            <span class="game-title">anchorsMiners</span>
-                            <a href="https://github.com/ARKANYOTA/LudumDare48_DeeperAndDeeper" class="cadre-github-link">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                        </p>
-                    </a>
+                <div class="games" id="game1" onclick="window.location='https://yolwoocle.itch.io/anchorsandminers';">
+                    <img src="images/games/logo-anchorsMiners.png" alt="anchorsMiners" class="image" id="anchorsMiners-image">
+                    <p class="cadre-image-titre cadre-titre">
+                        <span class="game-title">anchorsMiners</span>
+                        <a href="https://github.com/ARKANYOTA/LudumDare48_DeeperAndDeeper" class="cadre-github-link">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                    </p>
                 </div>
-                <div class="games" id="game2">
-                    <a href="https://yolwoocle.itch.io/chaser-of-dawn">
-                        <img src="images/games/logo-chaserOfDawn.png" alt="chaserOfDawn" class="image" id="chaserOfDawn-image">
-                        <p class="cadre-image-titre cadre-titre">
-                            <span class="game-title">chaserOfDawn</span>
-                            <a href="https://github.com/ARKANYOTA/ludumdare47" class="cadre-github-link">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                        </p>
-                    </a>
+                <div class="games" id="game2" onclick="window.location='https://yolwoocle.itch.io/chaser-of-dawn';">
+                    <img src="images/games/logo-chaserOfDawn.png" alt="chaserOfDawn" class="image" id="chaserOfDawn-image">
+                    <p class="cadre-image-titre cadre-titre">
+                        <span class="game-title">chaserOfDawn</span>
+                        <a href="https://github.com/ARKANYOTA/ludumdare47" class="cadre-github-link">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                    </p>
                 </div>
-                <div class="games" id="game3">
-                    <a href="https://yolwoocle.itch.io/octoboom">
-                        <img src="images/games/logo-octoboom.png" alt="Octoboom" class="image" id="Octoboom-image">
-                        <p class="cadre-image-titre cadre-titre">
-                            <span class="game-title">Octoboom</span>
-                            <a href="https://github.com/ARKANYOTA/ludumdare49" class="cadre-github-link">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                        </p>
-                    </a>
+                <div class="games" id="game3" onclick="window.location='https://yolwoocle.itch.io/octoboom';">
+                    <img src="images/games/logo-octoboom.png" alt="Octoboom" class="image" id="Octoboom-image">
+                    <p class="cadre-image-titre cadre-titre">
+                        <span class="game-title">Octoboom</span>
+                        <a href="https://github.com/ARKANYOTA/ludumdare49" class="cadre-github-link">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                    </p>
                 </div>
+            </div>
+        </section>
+        <section id="flag" class="page">
+            <h2>Write ups</h2>
+            <div class="page-content">
+                <p>
+                    Je n'ai pour le moment fait que le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr" class="link"><strong>Direction Générale de la Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/" class="link"><strong>Télécom SudParis</strong></a>
+                    </br>
+                    Le <a href="https://www.404ctf.fr/" class="link"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup> sur 2&nbsp;460 au classement avec 18859 points.
+                    </br>
+                    <a href="https://github.com/ARKANYOTA/write-ups/blob/main/404CTF/index.md" class="link"><strong>Write-Ups: ICI</strong></a>
+                </p>
             </div>
         </section>
         <section id="about" class="page">
@@ -203,34 +198,34 @@
             <div class="page-content">
                 <a href="https://github.com/ARKANYOTA" id="contact-github" class="contact-box">
                     <img class="contact-img" src="icons/contacts-icons/github-icon.svg" alt="github"/>
-                    <h3 class="link">ARKANYOTA</h3>
+                    <h3 class="link contact-link">ARKANYOTA</h3>
                 </a>
                     <a href="https://www.instagram.com/arkanyota" class="contact-instagram contact-box">
                         <img class="contact-img" src="icons/contacts-icons/instagram-icon.svg" alt="instagram"/>
-                        <h3 class="link">ARKANYOTA</h3>
+                        <h3 class="link contact-link">ARKANYOTA</h3>
                     </a>
-                    <a class="contact-discord contact-box" >
+                    <a class="contact-discord contact-box" id="contact-discord">
                         <img class="contact-img" src="icons/contacts-icons/discord-icon.svg" alt="discord"/>
-                        <h3 class="link selectable">arkanyota#3321</h3>
+                        <h3 class="link selectable contact-link click-to-copy">arkanyota#3321</h3>
+                        <div class="triangle" id="kill-streak-discord" data-color="#000">Click to copy</div>
                     </a>
                     <a href="https://twitter.com/arkanyota" class="contact-twitter contact-box">
                         <img class="contact-img" src="icons/contacts-icons/twitter-icon.svg" alt="twitter"/>
-                        <h3 class="link">arkanyota</h3>
+                        <h3 class="link contact-link">arkanyota</h3>
                     </a>
                     <a href="mailto:arkanyota@icloud.com" class="contact-mail contact-box">
                         <img class="contact-img" src="icons/contacts-icons/email-icon.svg" alt="mail"/>
-                        <h3 class="link">arkanyota@icloud.com</h3>
+                        <h3 class="link contact-link">arkanyota@icloud.com</h3>
                     </a>
                     <a href="https://www.linkedin.com/in/arkan-yota-3a0453210/" class="contact-linkedin contact-box">
                         <img class="contact-img" src="icons/contacts-icons/linkedin-icon.svg" alt="linkedin"/>
-                        <h3 class="link">Arkan Yota</h3>
+                        <h3 class="link contact-link">Arkan Yota</h3>
                     </a>
             </div>
         </section>
     </main>
     <footer style="display: none">
         N'est plus reponsive avec un width en dessous de 500px
-
     </footer>
 </body>
 </html>
