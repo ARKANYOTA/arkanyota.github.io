@@ -307,6 +307,12 @@ function load_kill_streak() {
 
 
 /* Fix probleme de façon pas propre, (removable) href sur toute la carte */
+function goto_href(link){
+    window.location = link;
+    const loading_bar = document.getElementById("loading_bar");
+    loading_bar.style.width = "80vw"
+}
+
 
 function on_load() {
     load_gasp();

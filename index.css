@@ -86,6 +86,23 @@ h2 {
     text-shadow: var(--main-color) 2px 2px 4px;
 }
 
+#loading_bar {
+    display: block;
+}
+
+#loading_bar {
+    position: fixed;
+    width: 0;
+    height: 20px;
+    background: lightgreen;
+    border-radius: 10px;
+    top: 50%;
+    left: 10vw;
+    transform: translate(0, -50%);
+    z-index: 5;
+    transition: ease 0.5s;
+}
+
 /* Navigation Bar */
 nav {
     position: fixed;
