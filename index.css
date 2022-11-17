@@ -6,6 +6,8 @@
     --text-color: #ffffff;
     --icon-color: #ff5f52;
     --kill-streak-color: #000;
+    --degrade-primary-color: #ff5f52;
+    --degrade-secondary-color: #ca0414;
 }
 
 /*:root:not(.light) {
@@ -430,12 +432,25 @@ span.game-title {
 }
 
 #about > .page-content > .path > .education {
-    background-color: var(--main-color);
+    background: linear-gradient(var(--degrade-primary-color), var(--degrade-secondary-color));
     text-align: center;
     width: 400px;
     height: 200px;
     border-radius: 9px;
     margin: 0 auto;
+}
+.education::after {
+    background: var(--back-color);
+    opacity: 0.6;
+    content: "";
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    transform: translateY(calc(-50% - 2px));
+    border-radius: 9px;
+    z-index: 1;
 }
 
 #about > .page-content > .path > .education > img {
@@ -447,6 +462,7 @@ span.game-title {
     border-radius: 50%;
     float: left;
     margin: 0 auto 0 30px;
+    z-index: 2;
 }
 
 #about > .page-content > .path > .education > .text {
@@ -456,6 +472,7 @@ span.game-title {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+    z-index: 2;
 }
 
 @media (max-width: 700px) {
@@ -578,7 +595,7 @@ span.game-title {
 }
 
 
-/* Sert en mod GODLIKE*/
+/* Sert en mod GODLIKE discord easter egg*/
 @keyframes tilt-n-move-shaking {
     0% { transform: translate(0, calc(-50% - 140px)) translate(0, 0) rotate(0deg); }
     25% { transform: translate(0, calc(-50% - 140px)) translate(5px, 5px) rotate(5deg); }
