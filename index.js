@@ -313,8 +313,16 @@ function goto_href(link){
     loading_bar.style.width = "80vw"
 }
 
+function load_age(){
+    const date = new Date(2004, 11, 26);
+    let diff = Date.now() - date.getTime();
+    let age = new Date(diff); 
+    let age_elt = document.getElementById("age");
+    age_elt.innerHTML = Math.abs(age.getUTCFullYear() - 1970);
+}
 
 function on_load() {
+    load_age();
     load_gasp();
     load_magnifier_code_image();
     load_easter_egg();
