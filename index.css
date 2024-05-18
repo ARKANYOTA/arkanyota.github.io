@@ -266,6 +266,14 @@ nav {
     z-index: 1;
 }
 
+#character > a > .monster {
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    left: 90px;
+    top: 70px;
+}
+
 #left-eye-img, #right-eye-img {
     width: 100%;
     border-radius: 50%;
