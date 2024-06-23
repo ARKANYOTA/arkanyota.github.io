@@ -310,9 +310,12 @@ function load_kill_streak() {
 function goto_href(link){
     window.location = link;
     const loading_bar = document.getElementById("loading_bar");
-    loading_bar.style.width = "80vw"
+    loading_bar.style.transition = "ease 3s";
+    loading_bar.style.width = "80vw";
+    setInterval(() => {
+        loading_bar.style.transition = "none";
+        loading_bar.style.width = "0px"}, 3000)
 }
-
 function load_age(){
     const date = new Date(2004, 11, 26);
     let diff = Date.now() - date.getTime();

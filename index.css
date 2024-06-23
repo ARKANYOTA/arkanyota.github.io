@@ -102,7 +102,7 @@ h2 {
     left: 10vw;
     transform: translate(0, -50%);
     z-index: 5;
-    transition: ease 0.5s;
+    transition: ease 3s;
 }
 
 /* Navigation Bar */
@@ -557,7 +557,8 @@ span.game-title {
     transition: 0.5s ease;
 }
 
-#contact > .page-content > a > .contact-img {
+/*#contact > .page-content > a > */
+.contact-img {
     width: 100px;
     padding-bottom: 10px;
     filter: invert();
@@ -567,7 +568,7 @@ span.game-title {
     transform: translate(0px, -20px);
 }
 
-#contact > .page-content > a:active > .contact-img {
+/*#contact > .page-content > */a:active > .contact-img {
     width: 80px;
 }
 
@@ -610,4 +611,33 @@ span.game-title {
     50% { transform: translate(0, calc(-50% - 140px)) translate(0, 0) rotate(0deg); }
     75% { transform: translate(0, calc(-50% - 140px)) translate(-5px, 5px) rotate(-5deg); }
     100% { transform: translate(0, calc(-50% - 140px)) translate(0, 0) rotate(0deg); }
+}
+
+
+#twitterbox {
+    display: block;
+    position: relative;
+}
+#twitterbox > img:not(:only-child):nth-child(1) {
+    display: none;
+    position:relative;
+    z-index:3;
+}
+#twitterbox:hover>img:nth-child(1){
+    display: block;
+    z-index:1;
+}
+#twitterbox>img:nth-child(2){
+    display: block;
+    position:relative;
+    z-index:2;
+}
+#twitterbox:hover>img:nth-child(2){
+    display: none;
+    position:relative;
+    z-index:2;
+}
+
+#twitterbox > img{
+    transition: ease 0.5s;
 }
