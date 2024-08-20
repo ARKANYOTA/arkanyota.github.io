@@ -356,7 +356,17 @@ nav {
     height: 200px;
     margin: 10px 10px 0;
     padding: 20px;
+    image-rendering: pixelated;
+
 }
+
+#game > .page-content > .games > #globs-image {
+    width: 200px;
+    height: auto;
+    margin: 10px 10px 0;
+    padding: 86px 20px 86px 20px;
+}
+
 @media (max-width: 700px) {
     #game > .page-content > .games {
         transform: scale(0.7);
@@ -371,6 +381,11 @@ nav {
 #game > .page-content > .games > #chaserOfDawn-image {
     background: black;
 }
+
+#game > .page-content > .games > #globs-image {
+    background: rgb(27, 33, 72);
+}
+
 
 #game > .page-content > .games > #Octoboom-image {
     background: rgb(85, 98, 180);
@@ -392,9 +407,14 @@ span.game-title {
     transform: rotate(-5deg);
 }
 
-#game3 {
-    transform: rotate(8deg);
+#game4 {
+    transform: rotate(4deg);
 }
+
+#game3 {
+    transform: rotate(7deg);
+}
+
 
 /* Flag page */
 #flag > .page-content {
