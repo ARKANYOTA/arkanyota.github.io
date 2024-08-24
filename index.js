@@ -285,7 +285,7 @@ function load_kill_streak() {
     const contactDiscord = document.querySelector("#contact-discord");
 
     contactDiscord.onclick = () => {
-        navigator.clipboard.writeText("arkanyota#3321").then(r => {
+        navigator.clipboard.writeText("https://discord.com/users/315241140464910349").then(r => {
             kill_streak++;
             contactDiscord.querySelector(".triangle").innerHTML = KILLSTREAKMESSAGE[Math.min(kill_streak, KILLSTREAKMESSAGE.length - 1)].message
             if(KILLSTREAKMESSAGE[Math.min(kill_streak, KILLSTREAKMESSAGE.length - 1)].additional_style){
