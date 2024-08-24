@@ -578,11 +578,18 @@ span.game-title {
 }
 
 /*#contact > .page-content > a > */
-.contact-img {
+img.contact-img {
     width: 100px;
     padding-bottom: 10px;
     filter: invert();
 }
+
+lottie-player.contact-img {
+    width: 100px;
+    padding-bottom: 10px;
+    filter: invert();
+}
+
 
 #contact > .page-content > a:hover {
     transform: translate(0px, -20px);
@@ -633,7 +640,7 @@ span.game-title {
     100% { transform: translate(0, calc(-50% - 140px)) translate(0, 0) rotate(0deg); }
 }
 
-
+/*
 #twitterbox {
     display: block;
     position: relative;
@@ -661,3 +668,4 @@ span.game-title {
 #twitterbox > img{
     transition: ease 0.5s;
 }
+*/
