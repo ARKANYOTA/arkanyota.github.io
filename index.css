@@ -1,13 +1,13 @@
 :root {
-    --main-color: #c62828;
-    --scondary-color: #EC4D37;
-    --back-color: #000000;
+    --main-color: #bf0404;
+    --scondary-color: #8c0303;
+    --back-color: #121113;
     --back-secondary-color: #1A1919;
-    --text-color: #ffffff;
-    --icon-color: #ff5f52;
-    --kill-streak-color: #000;
-    --degrade-primary-color: #ff5f52;
-    --degrade-secondary-color: #ca0414;
+    --text-color: #D6D5C9;
+    --icon-color: #590202;
+    --kill-streak-color: #121113;
+    --degrade-primary-color: #a22c29;
+    --degrade-secondary-color: #902923;
 }
 
 /*:root:not(.light) {
@@ -39,7 +39,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Outfit", "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html, body {
