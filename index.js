@@ -137,7 +137,7 @@ function load_gasp() {
 
     gsap.to("#navigation-bar", {
         scrollTrigger: {
-            trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse"
+             trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse", invalidateOnRefresh: true
         }, left: "4px", transform: "translate(0, -50%)", rotation: 0, duration: 1
     })
     /*gsap.to(".page1-bg-img", {
@@ -147,7 +147,7 @@ function load_gasp() {
     })*/
     gsap.to(".nav-text", {
         scrollTrigger: {
-            trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse",
+            trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse", invalidateOnRefresh: true
         }, opacity: 0.1, duration: 1, display: "none"
     })
 }

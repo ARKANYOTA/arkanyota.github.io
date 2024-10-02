@@ -1,9 +1,9 @@
 :root {
     --main-color: #bf0404;
-    --scondary-color: #8c0303;
+    --scondary-color: #f23d4c;
     --back-color: #121113;
     --back-secondary-color: #1A1919;
-    --text-color: #D6D5C9;
+    --text-color: #EaEaEa;
     --icon-color: #590202;
     --kill-streak-color: #121113;
     --degrade-primary-color: #a22c29;
@@ -37,8 +37,8 @@
 
 /* Main */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Outfit", "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -123,6 +123,7 @@ nav {
 
 .nav-text {
     vertical-align: middle;
+    font-weight: bolder;
 }
 
 .nav-image {
@@ -142,7 +143,9 @@ nav {
 
 /* All pages */
 .page {
-    height: 100vh;
+
+    min-height: 100vh;
+    height: auto;
     padding-left: 64px; /* 64px = 32px (nav-image) + 32px (margin) */
 }
 
@@ -189,7 +192,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px);
+    height: auto;
 }
 
 #code > .page-content > .code-preview {
@@ -317,24 +321,16 @@ nav {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px);
+    height:auto;
     gap: 20px;
     padding: 30px;
 }
 
-@media (max-height: 700px) {
-    #game {
-        height: 200vh;
-    }
-}
 @media (max-width: 700px) {
     #game > .page-content {
         flex-direction: row;
         gap: 100px;
-    }
-
-    #game { /*Games*/
-        height: 1200px;
     }
 }
 
@@ -418,36 +414,36 @@ span.game-title {
 
 /* Flag page */
 #flag > .page-content {
-    height: calc(100vh - 64px);
-}
-
-#flag > .page-content > p {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-
-}
-
-/* About page */
-#about > .page-content {
-    height: calc(100vh - 64px);
-}
-
-#about > .page-content > div {
+    min-height: calc(100vh - 64px);
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+/* About page */
+#about > .page-content {
+    min-height: calc(100vh - 64px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#about > .page-content > div {
+    display: flex;
+    height: 50%;
 }
 
 #about > .page-content > .description {
+    display: flex;
     height: 50%;
 }
 
 #about > .page-content > .description > p {
+    text-align: center;
+    margin: 0 auto;
 }
 
 #about > .page-content > .path {
@@ -460,12 +456,16 @@ span.game-title {
 }
 
 #about > .page-content > .path > .education {
-    background: linear-gradient(var(--degrade-primary-color), var(--degrade-secondary-color));
+    background: rgba( 152, 22, 22, 0.65 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8.5px );
+    -webkit-backdrop-filter: blur( 8.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
     width: 400px;
     height: 200px;
-    border-radius: 9px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .education::after {
     background: var(--back-color);
@@ -512,14 +512,6 @@ span.game-title {
         font-size: 13px;
     }
 
-    #about {
-        height: 200vh;
-    }
-
-    #about > .page-content {
-        height: calc(200vh - 64px);
-
-    }
 }
 
 /* Contact page */
@@ -536,7 +528,8 @@ span.game-title {
     align-items: center;
     align-self: center;
     width: 100%;
-    height: calc(100vh - 2em - 25px);
+    min-height: calc(100vh - 2em - 25px);
+    height: auto;
 }
 
 @media (max-width: 768px) {
@@ -549,7 +542,8 @@ span.game-title {
         align-items: center;
         align-self: center;
         width: 100%;
-        height: calc(100vh - 2em - 25px);
+        min-height: calc(100vh - 2em - 25px);
+        height: auto;
     }
 
 }
@@ -558,11 +552,13 @@ span.game-title {
     #contact > .page-content {
         display: flex;
         flex-direction: column;
-        height: calc(200vh - 2em - 25px);
+        min-height: calc(100vh - 2em - 25px);
+        height: auto;
     }
 
     #contact {
-        height: 200vh;
+        min-height: 200vh;
+        height: auto;
     }
 
 }
