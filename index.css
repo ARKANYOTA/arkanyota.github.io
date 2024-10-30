@@ -176,31 +176,87 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    max-width: min(400px, 40vw, 40vh);
+    width: 100%;
     z-index: 0;
 }
 
-@media (max-width: 800px) {
-    #home > .page-content > img {
-        width: 30vw;
-    }
-}
 
 
 /* Code page */
 #code > .page-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: calc(100vh - 64px);
     height: auto;
 }
 
+.code-preview{
+    columns: 900px;
+    break-inside: avoid;
+}
+
+.code-preview > div {
+    break-inside: avoid-column;
+    margin: 20px;
+    display: inline-block;
+    padding: 0;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    background: linear-gradient(#0e1011, #09090a) padding-box, linear-gradient(to bottom, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08)) border-box;
+}
+
+.code-preview > div::after {
+    content: "";
+    box-shadow: 2px 2px 9px 3px rgba(255, 128, 128, 0.3);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    z-index: -1;
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+}
+
+#code > .page-content > .code-preview > div > h3 {
+    color: var(--text-color);
+    padding: 0 10px 10px;
+}
+
+#code > .page-content > .code-preview > div > p {
+    color: var(--text-color);
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.code-preview .github-link {
+    z-index: 5;
+    width: 48px;
+    padding: 10px;
+    filter: invert();
+}
+
+.code-preview .icons-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+
+/*
 #code > .page-content > .code-preview {
     position: relative;
 }
 
-#code > .page-content > .code-preview > article {
+#code > .page-content > .code-preview > div {
     width: 60vw;
     border-radius: 9px;
     position: relative;
@@ -208,25 +264,25 @@ nav {
 
 }
 
-#code > .page-content > .code-preview > article[data-status="inactive"] {
+#code > .page-content > .code-preview > div[data-status="inactive"] {
     display: none;
 }
 
-#code > .page-content > .code-preview > article > .container {
+#code > .page-content > .code-preview > div > .container {
     position: static;
     overflow: hidden;
     border-radius: 10px;
 }
 
-#code > .page-content > .code-preview > article > .container > .illustration {
+#code > .page-content > .code-preview > div > .container > .illustration {
     width: 100%;
 }
 
-#code > .page-content > .code-preview > article > .container:hover {
+#code > .page-content > .code-preview > div > .container:hover {
 
 }
 
-#code > .page-content > .code-preview > article > h3 {
+#code > .page-content > .code-preview > div > h3 {
     position: absolute;
     bottom: 40px;
     left: 16px;
@@ -236,7 +292,7 @@ nav {
 
 }
 
-#code > .page-content > .code-preview > article > p {
+#code > .page-content > .code-preview > div > p {
     position: absolute;
     bottom: 16px;
     padding: 10px;
@@ -245,7 +301,7 @@ nav {
     text-shadow: var(--main-color) 2px 2px 2px;
 }
 
-#code > .page-content > .code-preview > article > a > .github-link {
+#code > .page-content > .code-preview > div > a > .github-link {
     position: absolute;
     bottom: 16px;
     right: 16px;
@@ -290,7 +346,7 @@ nav {
 }
 
 
-/* TODO is code here? */
+/ TODO is code here? /
 #game-left-button, #game-right-button {
     position: absolute;
     top: 50%;
@@ -313,7 +369,7 @@ nav {
     right: 0;
     background: linear-gradient(to left, #fff, transparent);
 }
-
+*/
 /* Games Page */
 #game > .page-content {
     display: flex;
@@ -347,6 +403,15 @@ nav {
     border-radius: 3px;
 }
 
+#game > .page-content > .games:hover {
+    box-shadow: 2px 2px 9px 3px rgba(255, 128, 128, 0.3);
+}
+#game > .page-content > .games {
+    border: 2px solid transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+
 #game > .page-content > .games > .image {
     width: 200px;
     height: 200px;
@@ -367,7 +432,6 @@ nav {
     #game > .page-content > .games {
         transform: scale(0.7);
     }
-
 }
 
 #game > .page-content > .games > #anchorsMiners-image {
@@ -395,21 +459,20 @@ span.game-title {
     font-weight: bold;
 }
 
-#game1 {
-    transform: rotate(3deg);
+#game > .page-content > .games:nth-child(1) {
+    transform: scale(0.7) rotate(-5deg);
+}
+#game > .page-content > .games:nth-child(4) {
+    transform: scale(0.8) rotate(5deg);
+}
+#game > .page-content > .games:nth-child(3) {
+    transform: scale(0.9) rotate(-4deg);
 }
 
-#game2 {
-    transform: rotate(-5deg);
+#game > .page-content > .games:nth-child(2) {
+    transform: scale(1) rotate(8deg);
 }
 
-#game4 {
-    transform: rotate(4deg);
-}
-
-#game3 {
-    transform: rotate(7deg);
-}
 
 
 /* Flag page */
@@ -420,6 +483,10 @@ span.game-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#flag > .page-content > p {
+    padding: 20px;
 }
 
 /* About page */
@@ -444,6 +511,7 @@ span.game-title {
 #about > .page-content > .description > p {
     text-align: center;
     margin: 0 auto;
+    padding: 20px ;
 }
 
 #about > .page-content > .path {
@@ -455,18 +523,49 @@ span.game-title {
     height: 50%;
 }
 
-#about > .page-content > .path > .education {
+/*#about > .page-content > .path > .education {
     background: rgba( 152, 22, 22, 0.65 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(255, 0, 0, 0.37);
     backdrop-filter: blur( 8.5px );
     -webkit-backdrop-filter: blur( 8.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}*/
+
+/*https://leonardo.ai*/
+#about > .page-content > .path > .education:hover {
+    background: linear-gradient(#0e1011, #0f1012) padding-box, linear-gradient(to bottom, rgba(219, 81, 81, 0.28), rgba(244, 75, 75, 0.32), #6e7bfc2b) border-box;
+    border-radius: 22px;
+    box-shadow: 2px 2px 9px 3px rgba(255, 128, 128, 0.3);
+}
+#about > .page-content > .path > .education {
+    background: linear-gradient(#0e1011, #09090a) padding-box, linear-gradient(to bottom, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08)) border-box;
+    border-radius: 22px;
+    border: 2px solid transparent;
+    transition: all 0.1s ease-in-out;
     text-align: center;
     width: 400px;
     height: 200px;
     margin: 10px auto;
+    overflow: hidden;
+    --x: 0;
+    --y: 0;
 }
+
+
+#about > .page-content > .path > .education:hover > .moving-element {
+    position: relative;
+    top: var(--y);
+    left: var(--x);
+    background-image: radial-gradient(circle, rgba(219, 81, 81, 0.28) 0%, rgba(244, 75, 75, 0.32) 17%, rgba(0,0,0,0) 41%);
+    border-radius: 60px;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+}
+
+/*
 .education::after {
     background: var(--back-color);
     opacity: 0.6;
@@ -479,7 +578,7 @@ span.game-title {
     transform: translateY(calc(-50% - 2px));
     border-radius: 9px;
     z-index: 1;
-}
+}*/
 
 #about > .page-content > .path > .education > img {
     position: relative;
@@ -509,7 +608,7 @@ span.game-title {
     }
 
     #about > .page-content > .path > .education > .text {
-        font-size: 13px;
+        font-size: 12px;
     }
 
 }
@@ -548,21 +647,6 @@ span.game-title {
 
 }
 
-@media (max-width: 450px) {
-    #contact > .page-content {
-        display: flex;
-        flex-direction: column;
-        min-height: calc(100vh - 2em - 25px);
-        height: auto;
-    }
-
-    #contact {
-        min-height: 200vh;
-        height: auto;
-    }
-
-}
-
 #contact > .page-content > a {
     height: 100%;
     width: 100%;
@@ -578,6 +662,7 @@ img.contact-img {
     width: 100px;
     padding-bottom: 10px;
     filter: invert();
+    margin: 20px;
 }
 
 lottie-player.contact-img {
