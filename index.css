@@ -190,7 +190,7 @@ nav {
 }
 
 .code-preview{
-    columns: 900px;
+    columns: 400px;
     break-inside: avoid;
 }
 
