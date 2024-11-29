@@ -136,11 +136,29 @@ nav {
     filter: invert();
 }
 
+.nav-container:hover > .nav-image {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+}
+
 .nav-image:active {
     width: 20px;
     height: 20px;
 }
 
+.nav-container:hover:has(>.nav-text[datahover="true"])::after{
+    content: attr(data-name);
+    color: var(--text-color);
+    text-shadow: var(--main-color) 2px 2px 4px;
+    font-weight: bolder;
+    vertical-align: middle;
+    background: var(--back-color);
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 2px 2px 9px 3px rgba(255, 128, 128, 0.3);
+}
 /* All pages */
 .page {
 

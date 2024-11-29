@@ -33,7 +33,22 @@ function load_gasp() {
     gsap.to(".nav-text", {
         scrollTrigger: {
             trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse", invalidateOnRefresh: true
-        }, opacity: 0.1, duration: 1, display: "none"
+        }, opacity: 0.1,
+        duration: 1,
+        display: "none",
+        onComplete: () => {
+            // Set datahover to true after the animation completes
+            document.querySelectorAll(".nav-text").forEach(element => {
+                element.setAttribute("datahover", "true");
+            });
+        },
+        onUpdate: () => {
+            // Reset datahover when animation reverses
+            document.querySelectorAll(".nav-text").forEach(element => {
+                element.setAttribute("datahover", "false");
+            });
+        }
+
     })
 }
 
