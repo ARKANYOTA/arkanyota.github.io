@@ -466,6 +466,10 @@ nav {
     background: #7E2553;
 }
 
+#game > .page-content > .games > #tlogf-image {
+    background: #313358;
+}
+
 #game > .page-content > .games > #chaserOfDawn-image {
     background: black;
 }
