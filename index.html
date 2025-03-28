@@ -13,354 +13,432 @@
     <script defer src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div id="loading_bar"></div>
-    </header>
-    <nav id="navigation-bar">
-        <ul class="nav-list">
-            <li>
-                <a href="#home" class="nav-container" data-name="Home">
-                    <img class="nav-image" src="icons/nav-icons/home.svg" alt="Home">
-                    <span class="nav-text">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="#code" class="nav-container" data-name="Codes">
-                    <img class="nav-image" src="icons/nav-icons/code.svg" alt="Code">
-                    <span class="nav-text">Codes</span>
-                </a>
-            </li>
-            <li>
-                <a href="#game" class="nav-container" data-name="Games">
-                    <img class="nav-image" src="icons/nav-icons/game.svg" alt="Game">
-                    <span class="nav-text">Games</span>
-                </a>
-            </li>
-            <li>
-                <a href="#flag" class="nav-container" data-name="Write Ups">
-                    <img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag">
-                    <span class="nav-text">Write Ups</span>
-                </a>
-            </li>
-            <li>
-                <a href="#about" class="nav-container" data-name="About me">
-                    <img class="nav-image" src="icons/nav-icons/about.svg" alt="About">
-                    <span class="nav-text">About me</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contact" class="nav-container" data-name="Contact">
-                    <img class="nav-image" src="icons/nav-icons/contact.svg" alt="Contact">
-                    <span class="nav-text">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home" class="page">
-            <h1>ARKANYOTA</h1>
-            <div class="page-content">
-                <img src="images/home/ay_logo3.png" class="page1-bg-img" alt="Background image">
-            </div>
-        </section>
-        <section id="code" class="page">
-            <h2>Code</h2>
-            <div class="page-content">
-                <div class="code-preview">
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/RayMarchingC.png" alt="RayMarchingC illustration" class="illustration">
-                        </div>
-                        <h3> ARKANYOTA <span class="slash">/</span> RayMarchingC </h3>
-                        <p class="code-desc">
-                            Un raymarching en C.
-                        </p>
-                        <div class="icons-links">
-                            <a href="https://github.com/ARKANYOTA/RayMarchingC">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                        </div>
+<header>
+    <div id="loading_bar"></div>
+
+</header>
+<nav id="navigation-bar">
+    <ul class="nav-list">
+        <li>
+            <a href="#home" class="nav-container" data-name="Home">
+                <img class="nav-image" src="icons/nav-icons/home.svg" alt="Home">
+                <span class="nav-text">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#code" class="nav-container" data-name="Codes">
+                <img class="nav-image" src="icons/nav-icons/code.svg" alt="Code">
+                <span class="nav-text">Codes</span>
+            </a>
+        </li>
+        <li>
+            <a href="#game" class="nav-container" data-name="Games">
+                <img class="nav-image" src="icons/nav-icons/game.svg" alt="Game">
+                <span class="nav-text">Games</span>
+            </a>
+        </li>
+        <li>
+            <a href="#flag" class="nav-container" data-name="Write Ups">
+                <img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag">
+                <span class="nav-text">Write Ups</span>
+            </a>
+        </li>
+        <li>
+            <a href="#about" class="nav-container" data-name="About me">
+                <img class="nav-image" src="icons/nav-icons/about.svg" alt="About">
+                <span class="nav-text">About me</span>
+            </a>
+        </li>
+        <li>
+            <a href="#contact" class="nav-container" data-name="Contact">
+                <img class="nav-image" src="icons/nav-icons/contact.svg" alt="Contact">
+                <span class="nav-text">Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section id="home" class="page">
+        <h1>ARKANYOTA</h1>
+        <div class="page-content">
+            <img src="images/home/ay_logo3.png" class="page1-bg-img" alt="Background image">
+        </div>
+    </section>
+    <section id="code" class="page">
+        <h2>Code</h2>
+        <div class="page-content">
+            <div class="code-preview">
+                <div>
+                    <div class="container">
+                        <img src="images/codes/RayMarchingC.png" alt="RayMarchingC illustration" class="illustration">
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/ProofTreeOcaml.png" alt="ProofTreeOcaml illustration" class="illustration">
-                        </div>
-                        <h3> ARKANYOTA <span class="slash">/</span> ProofTreeOcaml </h3>
-                        <p class="code-desc">
-                            Permet de prouver des théorèmes en logique propositionnelle, et de le visualiser avec LaTeX. Ecrit en OCaml.
-                        </p>
-                        <div class="icons-links">
+                    <h3> ARKANYOTA <span class="slash">/</span> RayMarchingC </h3>
+                    <p class="code-desc">
+                        Un raymarching en C.
+                    </p>
+                    <div class="icons-links">
+                        <a href="https://github.com/ARKANYOTA/RayMarchingC">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/ProofTreeOcaml.png" alt="ProofTreeOcaml illustration"
+                             class="illustration">
+                    </div>
+                    <h3> ARKANYOTA <span class="slash">/</span> ProofTreeOcaml </h3>
+                    <p class="code-desc">
+                        Permet de prouver des théorèmes en logique propositionnelle, et de le visualiser avec LaTeX.
+                        Ecrit en OCaml.
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/ARKANYOTA/ProofTreeOcaml">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/GalaxyBrainAndCoauthored.png" alt="GalaxyBrainAndCoauthored illustration" class="illustration">
-                        </div>
-                        <h3> ARKANYOTA <span class="slash">/</span> GalaxyBrainValidator | ARKANYOTA <span class="slash">/</span> CoauthoredValidator </h3>
-                        <p class="code-desc">
-                            Permet de faire les achivements de GalaxyBrain et Coauthored sur Github.
-                        </p>
-                        <div class="icons-links">
-                            <a href="https://github.com/ARKANYOTA/GalaxyBrainValidator">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                            <a href="https://github.com/ARKANYOTA/CoauthoredValidator">
-                                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                            </a>
-                        </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/GalaxyBrainAndCoauthored.png" alt="GalaxyBrainAndCoauthored illustration"
+                             class="illustration">
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/DrawOnGithubActivity.png" alt="DrawOnGithubActivity illustration" class="illustration">
-                        </div>
-                        <h3>
-                            ARKANYOTA <span class="slash">/</span> DrawOnGithubActivity
-                        </h3>
-                        <p class="code-desc">
-                            Permet de dessiner sur son activité Github avec une image à une date donnée.
-                        </p>
-                        <div class="icons-links">
+                    <h3> ARKANYOTA <span class="slash">/</span> GalaxyBrainValidator | ARKANYOTA <span
+                            class="slash">/</span> CoauthoredValidator </h3>
+                    <p class="code-desc">
+                        Permet de faire les achivements de GalaxyBrain et Coauthored sur Github.
+                    </p>
+                    <div class="icons-links">
+                        <a href="https://github.com/ARKANYOTA/GalaxyBrainValidator">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                        <a href="https://github.com/ARKANYOTA/CoauthoredValidator">
+                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/DrawOnGithubActivity.png" alt="DrawOnGithubActivity illustration"
+                             class="illustration">
+                    </div>
+                    <h3>
+                        ARKANYOTA <span class="slash">/</span> DrawOnGithubActivity
+                    </h3>
+                    <p class="code-desc">
+                        Permet de dessiner sur son activité Github avec une image à une date donnée.
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/ARKANYOTA/DrawOnGithubActivity">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/doomineur.png" alt="doomineur illustration" class="illustration">
-                        </div>
-                        <h3>
-                            PouletRaphoo <span class="slash">/</span> Doomineur
-                        </h3>
-                        <p class="code-desc">
-                            Un raycaster ecrit en python et OpenGL.
-                        </p>
-                        <div class="icons-links">
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/doomineur.png" alt="doomineur illustration" class="illustration">
+                    </div>
+                    <h3>
+                        PouletRaphoo <span class="slash">/</span> Doomineur
+                    </h3>
+                    <p class="code-desc">
+                        Un raycaster ecrit en python et OpenGL.
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/PouletRaphoo/Doomineur">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/asm-minesweeper.png" alt="asm-minesweeper illustration" class="illustration">
-                        </div>
-                        <h3>
-                            ARKANYOTA <span class="slash">/</span> ASM-Minesweeper
-                        </h3>
-                        <p class="code-desc">
-                            Un démineur en assembleur x86-64
-                        </p>
-                        <div class="icons-links">
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/asm-minesweeper.png" alt="asm-minesweeper illustration"
+                             class="illustration">
+                    </div>
+                    <h3>
+                        ARKANYOTA <span class="slash">/</span> ASM-Minesweeper
+                    </h3>
+                    <p class="code-desc">
+                        Un démineur en assembleur x86-64
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/ARKANYOTA/ASM-Minesweeper">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/venal.png" alt="venal illustration" class="illustration">
-                        </div>
-                        <h3>
-                            ARKANYOTA <span class="slash">/</span> Venal
-                        </h3>
-                        <p class="code-desc">
-                            Vlc player on terminal.
-                        </p>
-                        <div class="icons-links">
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/venal.png" alt="venal illustration" class="illustration">
+                    </div>
+                    <h3>
+                        ARKANYOTA <span class="slash">/</span> Venal
+                    </h3>
+                    <p class="code-desc">
+                        Vlc player on terminal.
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/ARKANYOTA/Venal">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
-                    <div>
-                        <div class="container">
-                            <img src="images/codes/fr-grid-clock.png" alt="fr grid clock" class="illustration">
-                        </div>
-                        <h3>
-                            ARKANYOTA <span class="slash">/</span> fr-grid-clock-screensaver
-                        </h3>
-                        <p class="code-desc">
-                            L'heure affichée avec du texte sous la forme d'une grille
-                        </p>
-                        <div class="icons-links">
+                </div>
+                <div>
+                    <div class="container">
+                        <img src="images/codes/fr-grid-clock.png" alt="fr grid clock" class="illustration">
+                    </div>
+                    <h3>
+                        ARKANYOTA <span class="slash">/</span> fr-grid-clock-screensaver
+                    </h3>
+                    <p class="code-desc">
+                        L'heure affichée avec du texte sous la forme d'une grille
+                    </p>
+                    <div class="icons-links">
                         <a href="https://github.com/ARKANYOTA/fr-grid-clock-screensaver">
                             <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
                         </a>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="game" class="page">
-            <h2>Games</h2>
-            <div class="page-content">
-                <div class="games" id="game1" onclick="goto_href('https://yolwoocle.itch.io/anchorsandminers')">
-                    <img src="images/games/logo-anchorsMiners.png" alt="anchorsMiners" class="image" id="anchorsMiners-image">
-                    <p class="cadre-image-titre cadre-titre">
-                        <span class="game-title">anchorsMiners</span>
-                        <a href="https://github.com/ARKANYOTA/LudumDare48_DeeperAndDeeper" class="cadre-github-link">
-                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                        </a>
-                    </p>
-                </div>
-                <div class="games" id="game4" onclick="goto_href('https://ninesliced.itch.io/globs')">
-                    <img src="images/games/globs_animated.gif" alt="globs_animated" class="animated-gif" id="globs-image">
-                    <p class="cadre-image-titre cadre-titre">
-                        <span class="game-title">Globs</span>
-                        <a href="https://github.com/ARKANYOTA/gmtk2024" class="cadre-github-link">
-                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                        </a>
-                    </p>
-                </div>
-                <div class="games" id="game2" onclick="goto_href('https://yolwoocle.itch.io/chaser-of-dawn')">
-                    <img src="images/games/logo-chaserOfDawn.png" alt="chaserOfDawn" class="image" id="chaserOfDawn-image">
-                    <p class="cadre-image-titre cadre-titre">
-                        <span class="game-title">chaserOfDawn</span>
-                        <a href="https://github.com/ARKANYOTA/ludumdare47" class="cadre-github-link">
-                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                        </a>
-                    </p>
-                </div>
-                <div class="games" id="game5" onclick="goto_href('https://ninesliced.itch.io/the-legend-of-the-goldfish')">
-                    <img src="images/games/logo-thelegend-of-the-goldfish.png" alt="the-legend-of-the-goldfish" class="image" id="tlogf-image">
-                    <p class="cadre-image-titre cadre-titre">
-                        <span class="game-title">The legend of the goldfish</span>
-                        <a href="https://github.com/Ninesliced/globalgamejam2025" class="cadre-github-link">
-                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                        </a>
-                    </p>
-                </div>
-                <div class="games" id="game3" onclick="goto_href('https://yolwoocle.itch.io/octoboom')">
-                    <img src="images/games/logo-octoboom.png" alt="Octoboom" class="image" id="Octoboom-image">
-                    <p class="cadre-image-titre cadre-titre">
-                        <span class="game-title">Octoboom</span>
-                        <a href="https://github.com/ARKANYOTA/ludumdare49" class="cadre-github-link">
-                            <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
-                        </a>
-                    </p>
-                </div>
+        </div>
+    </section>
+    <section id="game" class="page">
+        <h2>Games</h2>
+        <div class="page-content">
+            <div class="games" id="game1" onclick="goto_href('https://yolwoocle.itch.io/anchorsandminers')">
+                <img src="images/games/logo-anchorsMiners.png" alt="anchorsMiners" class="image"
+                     id="anchorsMiners-image">
+                <p class="cadre-image-titre cadre-titre">
+                    <span class="game-title">anchorsMiners</span>
+                    <a href="https://github.com/ARKANYOTA/LudumDare48_DeeperAndDeeper" class="cadre-github-link">
+                        <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                    </a>
+                </p>
             </div>
-        </section>
-        <section id="flag" class="page">
-            <h2>Write ups</h2>
-            <div class="page-content">
-                <div class="description">
+            <div class="games" id="game4" onclick="goto_href('https://ninesliced.itch.io/globs')">
+                <img src="images/games/globs_animated.gif" alt="globs_animated" class="animated-gif" id="globs-image">
+                <p class="cadre-image-titre cadre-titre">
+                    <span class="game-title">Globs</span>
+                    <a href="https://github.com/ARKANYOTA/gmtk2024" class="cadre-github-link">
+                        <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                    </a>
+                </p>
+            </div>
+            <div class="games" id="game2" onclick="goto_href('https://yolwoocle.itch.io/chaser-of-dawn')">
+                <img src="images/games/logo-chaserOfDawn.png" alt="chaserOfDawn" class="image" id="chaserOfDawn-image">
+                <p class="cadre-image-titre cadre-titre">
+                    <span class="game-title">chaserOfDawn</span>
+                    <a href="https://github.com/ARKANYOTA/ludumdare47" class="cadre-github-link">
+                        <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                    </a>
+                </p>
+            </div>
+            <div class="games" id="game5" onclick="goto_href('https://ninesliced.itch.io/the-legend-of-the-goldfish')">
+                <img src="images/games/logo-thelegend-of-the-goldfish.png" alt="the-legend-of-the-goldfish"
+                     class="image" id="tlogf-image">
+                <p class="cadre-image-titre cadre-titre">
+                    <span class="game-title">The legend of the goldfish</span>
+                    <a href="https://github.com/Ninesliced/globalgamejam2025" class="cadre-github-link">
+                        <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                    </a>
+                </p>
+            </div>
+            <div class="games" id="game3" onclick="goto_href('https://yolwoocle.itch.io/octoboom')">
+                <img src="images/games/logo-octoboom.png" alt="Octoboom" class="image" id="Octoboom-image">
+                <p class="cadre-image-titre cadre-titre">
+                    <span class="game-title">Octoboom</span>
+                    <a href="https://github.com/ARKANYOTA/ludumdare49" class="cadre-github-link">
+                        <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="flag" class="page">
+        <h2>Write ups</h2>
+        <div class="page-content">
+            <div class="description">
                 <p>
                     J'ai pour le moment fait:
                     </br>
-                    Le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr" class="link"><strong>Direction Générale de la Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/" class="link"><strong>Télécom SudParis</strong></a>
+                    Le Capture the Flag né d’une collaboration entre la <a href="https://www.dgse.gouv.fr/fr"
+                                                                           class="link"><strong>Direction Générale de la
+                    Sécurité Extérieure</strong></a> et <a href="https://www.telecom-sudparis.eu/" class="link"><strong>Télécom
+                    SudParis</strong></a>
                     </br>
-		    Le <a href="https://www.404ctf.fr/" class="link"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup> sur 2&nbsp;460 au classement avec 18&nbsp;859 points, sur la 1<sup>re</sup> édition, et arrivé 185<sup>e</sup> sur 2&nbsp;335 au classement avec 8&nbsp;732 points, sur la 2<sup>e</sup> édition.
+                    Le <a href="https://www.404ctf.fr/" class="link"><strong>404ctf</strong></a>, arrivé 130<sup>e</sup>
+                    sur 2&nbsp;460 au classement avec 18&nbsp;859 points, sur la 1<sup>re</sup> édition, et arrivé
+                    185<sup>e</sup> sur 2&nbsp;335 au classement avec 8&nbsp;732 points, sur la 2<sup>e</sup> édition.
                     </br>
                     </br>
-                    Puis le CTF de la conférence de l'Open Cycom Montpellier 2023, où on est arrivé 2<sup>eme</sup> avec mon équipe sur 25 team, avec 2&nbsp;920 points.
+                    Puis le CTF de la conférence de l'Open Cycom Montpellier 2023, où on est arrivé 2<sup>eme</sup> avec
+                    mon équipe sur 25 team, avec 2&nbsp;920 points.
                     </br>
-                    On a recu en cadeau une <a href="https://www.yubico.com" class="link">YubiKey 5C NFC</a> par personne avec une gourde. On est arrivé juste derrière la team de <a href="https://www.codingame.com/" class="link">CodinGame</a>.
+                    On a recu en cadeau une <a href="https://www.yubico.com" class="link">YubiKey 5C NFC</a> par
+                    personne avec une gourde. On est arrivé juste derrière la team de <a
+                        href="https://www.codingame.com/" class="link">CodinGame</a>.
                     </br>
                     </br>
                 </p>
-                </div>
-                <div class="root-me">
-                    <a href="https://github.com/ARKANYOTA/write-ups" class="link">
-                        <img class="contact-img" src="icons/contacts-icons/github-icon.svg" alt="write-ups"/>
-                        <h3 class="link contact-link flag-link">Write Ups</h3>
-                    </a>
-                    <a href="https://www.root-me.org/ARKANYOTA" class="contact-rootme contact-box">
-                        <img class="contact-img" src="icons/flag/root-me.svg" alt="github"/>
-                        <h3 class="link contact-link flag-link">Root Me</h3>
-                    </a>
-                </div>
             </div>
-        </section>
-        <section id="about" class="page">
-            <h2>About</h2>
-            <div class="page-content">
-                <div class="description">
-                    <p>
-                        J'ai <span id="age">18</span> ans.
-                        Passionné par l'informatique, je suis actuellement étudiant ingénieur en sciences du numérique. </br>
-                        Mes intérêts portent sur la cybersécurité et le développement de jeux. </br>
-                        Curieux et avide d'apprendre, j'aime explorer de nouvelles technologies et relever des défis complexes. </br>
-                    </p>
-                </div>
-                <div class="path">
-                    <div class="education" id="joffre">
-                        <img src="images/aboutme/joffre.png" alt="joffre"/>
-                        <div class="text">
-                            <p>Lycée Joffre</p>
-                            <p>Baccalauréat, Informatics</p>
-                            <p>Sep 2019 - Jul 2022</p>
-                            <p>Grade: 2nd, 1re, Tle</p>
-                        </div>
-                        <div class="moving-element"></div>
-                    </div>
-                    <div class="education" id="thiers">
-                        <img src="images/aboutme/thiers.jpg" alt="thiers"/>
-                        <div class="text">
-                            <p>CPGE Thiers</p>
-                            <p>Grande école</p>
-                            <p>Sep 2022 - Jul 2024</p>
-                            <p>Grade: Prépa</p>
-                        </div>
-                        <div class="moving-element"></div>
-                    </div>
-                    <div class="education" id="n7">
-                        <img src="images/aboutme/n7.png" alt="thiers"/>
-                        <div class="text">
-                            <p>ENSEEIHT</p>
-                            <p>Ingénieur</p>
-                            <p>Sep 2022 - Jul 2025</p>
-                            <p>Grade: Bac+2 to Bac+5</p>
-                        </div>
-                        <div class="moving-element"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="page">
-            <h2>Contact</h2>
-            <div class="page-content">
-                <a href="https://github.com/ARKANYOTA" id="contact-github" class="contact-box">
-                    <img class="contact-img" src="icons/contacts-icons/github-icon.svg" alt="github"/>
-                    <h3 class="link contact-link">ARKANYOTA</h3>
+            <div class="root-me">
+                <a href="https://github.com/ARKANYOTA/write-ups" class="link">
+                    <img class="contact-img" src="icons/contacts-icons/github-icon.svg" alt="write-ups"/>
+                    <h3 class="link contact-link flag-link">Write Ups</h3>
                 </a>
-                    <a href="https://www.instagram.com/arkanyota" class="contact-instagram contact-box">
-                        <img class="contact-img" src="icons/contacts-icons/instagram-icon.svg" alt="instagram"/>
-                        <h3 class="link contact-link">ARKANYOTA</h3>
-                    </a>
-                    <a class="contact-discord contact-box" id="contact-discord">
-                        <img class="contact-img" src="icons/contacts-icons/discord-icon.svg" alt="discord"/>
-                        <h3 class="link selectable contact-link click-to-copy">arkanyota</h3>
-                        <div class="triangle" id="kill-streak-discord" data-color="#000">Click to copy</div>
-                    </a>
-                    <a href="https://twitter.com/arkanyota" class="contact-twitter contact-box" >
-                        <div id="twitterbox">
-                            <!--<img class="contact-img" id="x" src="icons/contacts-icons/icons8-x.svg" alt="X"/>-->
-                            <lottie-player class="contact-img" src="icons/contacts-icons/lottie-animation/twitter_animation_v3.json" background="transparent"  speed="1" hover></lottie-player>
-                            <!--<img class="contact-img" id="twitter" src="icons/contacts-icons/twitter-icon.svg" alt="twitter"/>-->
-                        </div>
-                        <h3 class="link contact-link">arkanyota</h3>
-                    </a>
-                    <a href="mailto:arkanyota@icloud.com" class="contact-mail contact-box">
-                        <img class="contact-img" src="icons/contacts-icons/email-icon.svg" alt="mail"/>
-                        <h3 class="link contact-link">arkanyota@icloud.com</h3>
-                    </a>
-                    <a href="https://www.linkedin.com/in/nolan-carlisi" class="contact-linkedin contact-box">
-                        <img class="contact-img" src="icons/contacts-icons/linkedin-icon.svg" alt="linkedin"/>
-                        <h3 class="link contact-link">Nolan Carlisi</h3>
-                    </a>
+                <a href="https://www.root-me.org/ARKANYOTA" class="contact-rootme contact-box">
+                    <img class="contact-img" src="icons/flag/root-me.svg" alt="github"/>
+                    <h3 class="link contact-link flag-link">Root Me</h3>
+                </a>
             </div>
-        </section>
-    </main>
-    <footer style="display: none">
-        N'est plus reponsive avec un width en dessous de 500px
-    </footer>
+        </div>
+    </section>
+    <section id="competances" class="page">
+        <h2>Compétences</h2>
+        <div class="page-content">
+            <div class="competances-container">
+                <ul class="competances-list competances-langages">
+                    <li class="competances-prog">Programmation
+                        <ul class="competances-list-list competances-langages-prog">
+                            <li class="competances-langage">C</li>
+                            <li class="competances-langage">Python</li>
+                            <li class="competances-langage">OCaml</li>
+                            <li class="competances-langage">ASM</li>
+                            <li class="competances-langage">Java</li>
+                        </ul>
+                    </li>
+                    <ul class="competances-list-list competances-langages-web">
+                        <li class="competances-langage">HTML/CSS/JS</li>
+                        <li class="competances-langage">Svelte</li>
+                        <li class="competances-langage">Prisma</li>
+                        <li class="competances-langage">SQL</li>
+                    </ul>
+                    <ul class="competances-list-list competances-langages-maths">
+                        <li class="competances-langage">Matlab</li>
+                        <li class="competances-langage">LaTeX</li>
+                    </ul>
+                </ul>
+
+                <!--
+                - Langages:
+                    - Prog:
+                        - C
+                        - Python
+                        - OCaml
+                        - ASM
+                        - Java
+                    - Web:
+                        - HTML/CSS/JS
+                        - Svelte
+                        - Prisma
+                        - SQL
+                    - Maths:
+                        - Matlab
+                        - LaTeX
+                - Annexe:
+                    - Git
+                    - Docker
+                    - Kubernetes
+                    - Linux
+                    - Blender
+                    - Godot
+                    - Idea
+                    - Vim
+                -->
+            </div>
+        </div>
+    </section>
+    <section id="about" class="page">
+        <h2>About</h2>
+        <div class="page-content">
+            <div class="description">
+                <p>
+                    J'ai <span id="age">18</span> ans.
+                    Passionné par l'informatique, je suis actuellement étudiant ingénieur en sciences du
+                    numérique. </br>
+                    Mes intérêts portent sur la cybersécurité et le développement de jeux. </br>
+                    Curieux et avide d'apprendre, j'aime explorer de nouvelles technologies et relever des défis
+                    complexes. </br>
+                </p>
+            </div>
+            <div class="path">
+                <div class="education" id="joffre">
+                    <img src="images/aboutme/joffre.png" alt="joffre"/>
+                    <div class="text">
+                        <p>Lycée Joffre</p>
+                        <p>Baccalauréat, Informatics</p>
+                        <p>Sep 2019 - Jul 2022</p>
+                        <p>Grade: 2nd, 1re, Tle</p>
+                    </div>
+                    <div class="moving-element"></div>
+                </div>
+                <div class="education" id="thiers">
+                    <img src="images/aboutme/thiers.jpg" alt="thiers"/>
+                    <div class="text">
+                        <p>CPGE Thiers</p>
+                        <p>Grande école</p>
+                        <p>Sep 2022 - Jul 2024</p>
+                        <p>Grade: Prépa</p>
+                    </div>
+                    <div class="moving-element"></div>
+                </div>
+                <div class="education" id="n7">
+                    <img src="images/aboutme/n7.png" alt="thiers"/>
+                    <div class="text">
+                        <p>ENSEEIHT</p>
+                        <p>Ingénieur</p>
+                        <p>Sep 2022 - Jul 2025</p>
+                        <p>Grade: Bac+2 to Bac+5</p>
+                    </div>
+                    <div class="moving-element"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="page">
+        <h2>Contact</h2>
+        <div class="page-content">
+            <a href="https://github.com/ARKANYOTA" id="contact-github" class="contact-box">
+                <img class="contact-img" src="icons/contacts-icons/github-icon.svg" alt="github"/>
+                <h3 class="link contact-link">ARKANYOTA</h3>
+            </a>
+            <a href="https://www.instagram.com/arkanyota" class="contact-instagram contact-box">
+                <img class="contact-img" src="icons/contacts-icons/instagram-icon.svg" alt="instagram"/>
+                <h3 class="link contact-link">ARKANYOTA</h3>
+            </a>
+            <a class="contact-discord contact-box" id="contact-discord">
+                <img class="contact-img" src="icons/contacts-icons/discord-icon.svg" alt="discord"/>
+                <h3 class="link selectable contact-link click-to-copy">arkanyota</h3>
+                <div class="triangle" id="kill-streak-discord" data-color="#000">Click to copy</div>
+            </a>
+            <a href="https://twitter.com/arkanyota" class="contact-twitter contact-box">
+                <div id="twitterbox">
+                    <!--<img class="contact-img" id="x" src="icons/contacts-icons/icons8-x.svg" alt="X"/>-->
+                    <lottie-player class="contact-img"
+                                   src="icons/contacts-icons/lottie-animation/twitter_animation_v3.json"
+                                   background="transparent" speed="1" hover></lottie-player>
+                    <!--<img class="contact-img" id="twitter" src="icons/contacts-icons/twitter-icon.svg" alt="twitter"/>-->
+                </div>
+                <h3 class="link contact-link">arkanyota</h3>
+            </a>
+            <a href="mailto:arkanyota@icloud.com" class="contact-mail contact-box">
+                <img class="contact-img" src="icons/contacts-icons/email-icon.svg" alt="mail"/>
+                <h3 class="link contact-link">arkanyota@icloud.com</h3>
+            </a>
+            <a href="https://www.linkedin.com/in/nolan-carlisi" class="contact-linkedin contact-box">
+                <img class="contact-img" src="icons/contacts-icons/linkedin-icon.svg" alt="linkedin"/>
+                <h3 class="link contact-link">Nolan Carlisi</h3>
+            </a>
+        </div>
+    </section>
+</main>
+<footer style="display: none">
+    N'est plus reponsive avec un width en dessous de 500px
+</footer>
 </body>
 </html>

@@ -558,6 +558,27 @@ span.game-title {
     padding: 20px;
 }
 
+/* Competances page */
+
+#competances > .page-content {
+    min-height: calc(100vh - 64px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#competances > .page-content > .competances-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
 /* About page */
 #about > .page-content {
     min-height: calc(100vh - 64px);
