@@ -22,6 +22,10 @@
     })
 </script>
 
+<svelte:head>
+    <title>Arkanyota - Portfolio</title>
+</svelte:head>
+
 <div>
     <Nav />
     <Page title="home">
@@ -36,7 +40,7 @@
     <Page title="flag">
         <Flag />
     </Page>
-    <Page title="competances">
+    <Page title="compétences">
         <Competances />
     </Page>
     <Page title="about">

@@ -28,7 +28,7 @@
         if(!root) return;
 
         contactDiscord.onclick = () => {
-            navigator.clipboard.writeText("https://discord.com/users/315241140464910349").then(r => {
+            navigator.clipboard.writeText("https://discord.gg/gRhHWXR4").then(r => {
                 kill_streak++;
                 triangle.innerHTML = KILLSTREAKMESSAGE[Math.min(kill_streak, KILLSTREAKMESSAGE.length - 1)].message
                 // const additional_style = KILLSTREAKMESSAGE[Math.min(kill_streak, KILLSTREAKMESSAGE.length - 1)].additional_style;

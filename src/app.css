@@ -13,6 +13,7 @@
     --degrade-primary-color: #a22c29;
     --degrade-secondary-color: #902923;
     --background-color: rgba(255, 255, 255, 0.1);
+    --background-color-no-transp: rgba(42,41,43, 1);
 
 }
 
@@ -45,7 +46,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Outfit", "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans", "Outfit", "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -85,8 +86,14 @@ h1, h2, h3, h4, h5, h6, p, span {
     color: var(--text-color);
 }
 
-h2 {
+h1, .title-arkanyota {
     text-shadow: var(--main-color) 2px 2px 4px;
+    font-family: "Fira Mono", monospace !important;
+}
+
+h2, .title-global, .nav-text {
+    text-shadow: var(--main-color) 2px 2px 4px;
+    font-family: "Fira Mono", monospace !important;
 }
 
 #loading_bar {

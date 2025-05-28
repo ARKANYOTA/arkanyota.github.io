@@ -2,11 +2,11 @@
     export let title = '';
 </script>
 
-<section id={title} class="page">
+<section id={title} class="page {title}">
     {#if title==="home"}
-        <h1>ARKANYOTA</h1>
+        <h1 class="title-arkanyota">ARKANYOTA</h1>
     {:else}
-        <h2>{title}</h2>
+        <h2 class="title-global">{title}</h2>
     {/if}
     <div class="page-content">
         <slot></slot>
@@ -23,6 +23,10 @@
         min-height: 100vh;
         height: auto;
         padding-left: 64px; /* 64px = 32px (nav-image) + 32px (margin) */
+    }
+
+    .home {
+        padding-left: 0;
     }
 
 

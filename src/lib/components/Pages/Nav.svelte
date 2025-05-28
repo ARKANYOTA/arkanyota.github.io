@@ -71,9 +71,9 @@
             </a>
         </li>
         <li>
-            <a href="#competances" class="nav-container" data-name="Competances">
+            <a href="#compétences" class="nav-container" data-name="Compétences">
                 <Icon icon="mdi:wrench" width="24" height="24" class="nav-image" color="black"/>
-                <span class="nav-text">Competances</span>
+                <span class="nav-text">Compétences</span>
             </a>
         </li>
         <li>

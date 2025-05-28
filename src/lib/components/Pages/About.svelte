@@ -12,7 +12,18 @@
 
     onMount(() => {
         load_age();
+
+        document.getElementById("cv")?.addEventListener("mousemove", (e) => {
+            const educationElements = document.querySelectorAll(".mini-cv-image");
+            educationElements.forEach((element) => {
+                const x = e.clientX - element.getBoundingClientRect().left;
+                const y = e.clientY - element.getBoundingClientRect().top;
+                element.style.left = `${x}px`;
+                element.style.top = `${y}px`;
+            });
+        });
     });
+
 </script>
 
 <div class="preview">
@@ -55,9 +66,59 @@
             </div>
         </div>
     </div>
+    <div class="cv" id="cv">
+        <a href="files/cv/cv_nolan_carlisi_normal.pdf" target="_blank" >
+            <p class="cv-text">CV Normal</p>
+            <img src="files/cv/cv_nolan_carlisi_normal@3x.png" alt="cv" class="mini-cv-image"/>
+        </a>
+        <a href="files/cv/cv_nolan_carlisi_print.pdf" target="_blank">
+            <p class="cv-text">CV Web 2</p>
+            <img src="files/cv/cv_nolan_carlisi_print@3x.png" alt="cv" class="mini-cv-image"/>
+        </a>
     </div>
+</div>
 
 <style>
+    /*
+    CV
+    */
+
+    .cv-text {
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px ;
+        font-size: 20px;
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: 10px;
+    }
+
+    .cv-text:hover + .mini-cv-image {
+        display: block;
+        /* transition: all 0.5s ease-in-out; */
+    }
+
+
+    .mini-cv-image {
+        display: none;
+        position: absolute;
+        width: 300px;
+    }
+
+    .cv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 50%;
+    }
+
+
+
+
+
+
 
     .preview {
         min-height: calc(100vh - 64px);
