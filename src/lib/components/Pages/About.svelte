@@ -10,18 +10,14 @@
         age_elt.innerHTML = Math.abs(age.getUTCFullYear() - 1970).toString();
     }
 
+    let old_position = $state({ x: 0, y: 0 });
+
+    function abs(value: number): number {
+        return value < 0 ? -value : value;
+    }
+
     onMount(() => {
         load_age();
-
-        document.getElementById("cv")?.addEventListener("mousemove", (e) => {
-            const educationElements = document.querySelectorAll(".mini-cv-image");
-            educationElements.forEach((element) => {
-                const x = e.clientX - element.getBoundingClientRect().left;
-                const y = e.clientY - element.getBoundingClientRect().top;
-                element.style.left = `${x}px`;
-                element.style.top = `${y}px`;
-            });
-        });
     });
 
 </script>
@@ -67,13 +63,13 @@
         </div>
     </div>
     <div class="cv" id="cv">
-        <a href="files/cv/cv_nolan_carlisi_normal.pdf" target="_blank" >
+        <a href="files/cv/cv_nolan_carlisi_normal.pdf" target="_blank" class="cv-box" >
             <p class="cv-text">CV Normal</p>
-            <img src="files/cv/cv_nolan_carlisi_normal@3x.png" alt="cv" class="mini-cv-image"/>
+            <!--<img src="files/cv/cv_nolan_carlisi_normal@3x.png" alt="cv" class="mini-cv-image"/>-->
         </a>
-        <a href="files/cv/cv_nolan_carlisi_print.pdf" target="_blank">
+        <a href="files/cv/cv_nolan_carlisi_print.pdf" target="_blank" class="cv-box">
             <p class="cv-text">CV Web 2</p>
-            <img src="files/cv/cv_nolan_carlisi_print@3x.png" alt="cv" class="mini-cv-image"/>
+            <!--<img src="files/cv/cv_nolan_carlisi_print@3x.png" alt="cv" class="mini-cv-image"/>-->
         </a>
     </div>
 </div>
@@ -89,8 +85,20 @@
         padding: 20px ;
         font-size: 20px;
         color: var(--text-color);
-        border: 1px solid var(--text-color);
-        border-radius: 10px;
+        border-left: 2px solid #902923;
+        border-right: 2px solid #902923;
+        border-radius: 3px;
+        background-color: var(--background-color-no-transp);
+
+    }
+
+    .cv-text:hover {
+        background-color: #902923;
+    }
+
+    .mini-cv-image:hover {
+        display: block;
+        /* transition: all 0.5s ease-in-out; */
     }
 
     .cv-text:hover + .mini-cv-image {
@@ -103,6 +111,8 @@
         display: none;
         position: absolute;
         width: 300px;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
     }
 
     .cv {
