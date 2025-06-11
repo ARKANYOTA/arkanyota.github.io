@@ -96,6 +96,9 @@
 
     .games:hover {
         box-shadow: 2px 2px 9px 3px rgba(255, 128, 128, 0.3);
+        width: 270px;
+        transition: all 0.1s ease-in-out;
+
     }
     .games {
         border: 2px solid transparent;

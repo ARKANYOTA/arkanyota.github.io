@@ -68,7 +68,7 @@
             <!--<img src="files/cv/cv_nolan_carlisi_normal@3x.png" alt="cv" class="mini-cv-image"/>-->
         </a>
         <a href="files/cv/cv_nolan_carlisi_print.pdf" target="_blank" class="cv-box">
-            <p class="cv-text">CV Web 2</p>
+            <p class="cv-text">CV Imprimable</p>
             <!--<img src="files/cv/cv_nolan_carlisi_print@3x.png" alt="cv" class="mini-cv-image"/>-->
         </a>
     </div>

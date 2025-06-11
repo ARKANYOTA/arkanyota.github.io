@@ -130,6 +130,25 @@
             </a>
         </div>
     </div>
+    <div>
+        <div class="container">
+            <img src="images/codes/morse_clavier_border.png" alt="clavier en morse" class="illustration">
+        </div>
+        <h3>
+            ARKANYOTA <span class="slash">/</span> ArduinoMorseKeyboard
+        </h3>
+        <p class="code-desc">
+            Clavier en morse à une seule touche, utilisant un Arduino Nano.
+        </p>
+        <div class="icons-links">
+            <a href="https://github.com/ARKANYOTA/ArduinoMorseKeyboard">
+                <img src="icons/contacts-icons/github-icon.svg" alt="github" class="github-link"/>
+            </a>
+            <a href="https://www.reddit.com/r/arduino/comments/jyebh5/me_and_my_friend_uarkanyota_made_a_functional/">
+                <img src="icons/contacts-icons/reddit-icon.svg" alt="reddit" class="reddit-link"/>
+            </a>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -198,6 +217,13 @@
         z-index: 5;
         width: 48px;
         padding: 10px;
+        filter: invert();
+    }
+
+    .reddit-link {
+        z-index: 5;
+        width: 64px;
+        padding: 2px;
         filter: invert();
     }
 
