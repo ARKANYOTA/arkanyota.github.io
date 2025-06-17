@@ -7,6 +7,7 @@
     function load_gasp() {
         gsap.registerPlugin(ScrollTrigger);
 
+
         gsap.to("#navigation-bar", {
             scrollTrigger: {
                 trigger: "section:not(#home)", scrub: true, end: "top 20%", toggleActions: "play reverse play reverse", invalidateOnRefresh: true

@@ -80,7 +80,7 @@
         </div>
         <ul class="list" style="--number-of-items: 5;">
             <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#3776AB" dev_icon_simple="python" dev_icon="python">Python</IconButton></li>
-            <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#71ffcb" dev_icon_simple="c" dev_icon="c">C</IconButton></li>
+            <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#616bba" dev_icon_simple="c" dev_icon="c">C</IconButton></li>
             <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#e39139" dev_icon_simple="ocaml" dev_icon="ocaml">Ocaml</IconButton></li>
             <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#007396" dev_icon_simple="java" dev_icon="java">Java</IconButton></li>
             <li class="lang" style='--dx: 0px; --dy: 0px;'><IconButton active_button_name="programation" bg_color="#425893" dev_icon_simple="file-icons:nasm" dev_icon="logos:nasm">ASM</IconButton></li>

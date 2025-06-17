@@ -1,12 +1,19 @@
 <script>
+    import WakeyWakey from "$lib/components/Eggs/WakeyWakey/WakeyWakey.svelte";
+
     export let title = '';
 </script>
 
 <section id={title} class="page {title}">
+
     {#if title==="home"}
-        <h1 class="title-arkanyota">ARKANYOTA</h1>
+        <h1 class="title title-arkanyota">ARKANYOTA</h1>
     {:else}
-        <h2 class="title-global">{title}</h2>
+        <h2 class="title title-global">{title}
+        {#if title==="games"}
+            <WakeyWakey />
+        {/if}</h2>
+
     {/if}
     <div class="page-content">
         <slot></slot>
@@ -30,6 +37,12 @@
     }
 
 
+    .title {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
 
     .page > h1 {
         font-size: 3em;
