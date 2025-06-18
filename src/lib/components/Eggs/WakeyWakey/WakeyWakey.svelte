@@ -11,10 +11,17 @@
         const wakeyWakeyContainer = document.getElementById("wakey-wakey-container");
         if (!wakeyWakeyContainer) return;
         wakeyWakeyContainer.addEventListener("mouseenter", () => {
-            if (eh_laisse_moi_dormir_wesh >= 3) {
+            if (eh_laisse_moi_dormir_wesh >= 3 && current_state!==2) {
                 current_state = 2; // overexcited
+                setTimeout(() => {
+                    current_state = 0; // sleepy
+                    eh_laisse_moi_dormir_wesh = 0; // reset counter
+                }, 30000);
                 return;
             };
+            if(eh_laisse_moi_dormir_wesh >= 3) {
+                return;
+            }
             if (is_timeouted) return; // already hovered
             current_state = 1; // awake
             is_timeouted = true;
@@ -34,7 +41,7 @@
 
 </script>
 
-<div id="wakey-wakey-container" onclick={handleClick} style="cursor: {current_state === 2 ? 'pointer' : 'default'}" aria-label="Wakey Wakey">
+<div id="wakey-wakey-container" onclick={handleClick} style="cursor: {current_state === 2 ? 'pointer' : 'default'}" aria-label="Wakey Wakey" aria-roledescription="Click to wake up the monster!" role="button">
     <div class="globs">
         <div class="glob" data-state={current_state===0 ? 'sleepy' : (current_state ===1 ? 'awake' : 'overexcited')}></div>
         <div class="glob-eyes" data-state={current_state===0 ? 'sleepy' : (current_state ===1 ? 'awake' : 'overexcited')}></div>
