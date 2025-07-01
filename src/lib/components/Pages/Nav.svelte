@@ -39,43 +39,43 @@
         <li>
             <a href="#home" class="nav-container" data-name="Home">
               <div class="nav-text-container"><span class="nav-text">Home</span></div>
-                <img class="nav-image" src="icons/nav-icons/home.svg" alt="Home">
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/home.svg" alt="Home"></div>
             </a>
         </li>
         <li>
             <a href="#code" class="nav-container" data-name="Codes">
               <div class="nav-text-container"><span class="nav-text">Codes</span></div>
-              <Icon icon="material-symbols:code" width="24" height="24" class="nav-image" color="black"/>
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/code2.svg" alt="Codes"></div> <!-- <Icon icon="material-symbols:code" width="24" height="24" class="nav-image" color="black"/> -->
             </a>
         </li>
         <li>
             <a href="#games" class="nav-container" data-name="Games">
               <div class="nav-text-container"><span class="nav-text">Games</span></div>
-              <img class="nav-image" src="icons/nav-icons/game.svg" alt="Game">
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/game.svg" alt="Game"></div>
             </a>
         </li>
         <li>
             <a href="#flag" class="nav-container" data-name="Write Ups">
               <div class="nav-text-container"><span class="nav-text">Write Ups</span></div>
-              <img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag">
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/flag.svg" alt="Flag"></div>
             </a>
         </li>
         <li>
             <a href="#compétences" class="nav-container" data-name="Compétences">
               <div class="nav-text-container"><span class="nav-text">Compétences</span></div>
-              <Icon icon="mdi:wrench" width="24" height="24" class="nav-image" color="black"/>
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/competences.svg" alt="Compétences"></div> <!-- <Icon icon="mdi:wrench" width="24" height="24" class="nav-image" color="black"/> -->
             </a>
         </li>
         <li>
             <a href="#about" class="nav-container" data-name="About me">
               <div class="nav-text-container"><span class="nav-text">About me</span></div>
-              <img class="nav-image" src="icons/nav-icons/about.svg" alt="About">
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/about.svg" alt="About"></div>
             </a>
         </li>
         <li>
             <a href="#contact" class="nav-container" data-name="Contact">
               <div class="nav-text-container"><span class="nav-text">Contact</span></div>
-              <img class="nav-image" src="icons/nav-icons/contact.svg" alt="Contact">
+              <div class="nav-image-container"><img class="nav-image" src="icons/nav-icons/contact.svg" alt="Contact"></div>
             </a>
         </li>
     </ul>
@@ -119,7 +119,7 @@
         transition: width 0.3s linear;
     }
 
-    #nav-list.expanded > li > .nav-container:hover > .nav-text-container > .nav-text {
+    #nav-list.expanded > li > .nav-container:has(>.nav-image-container:hover) > .nav-text-container > .nav-text {
         opacity: 1;
         position: absolute;
         border-right: #902923 2px solid;
@@ -161,12 +161,13 @@
         filter: invert();
     }
 
-    .nav-container:hover > .nav-image {
+    .nav-image-container:hover > .nav-image {
       position: relative;
         width: 32px;
         height: 32px;
         padding: 8px;
     }
+
 
     .nav-image:active {
         width: 20px;

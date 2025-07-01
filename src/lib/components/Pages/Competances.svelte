@@ -128,9 +128,7 @@
 </div>
 
 <style>
-    :root {
-        --angle: 30deg;
-    }
+
 
     .preview {
         display: flex;
@@ -144,23 +142,32 @@
         padding: 30px 94px 30px 30px;
     }
 
-    @media (max-width: 752px) {
-        .preview {
-            flex-direction: row;
-            gap: 100px;
-        }
-    }
-
-
     .button-container{
         position: relative;
         height: 60px;
         width: 300px;
         margin-top: 16px;
     }
+    @media (max-width: 752px) {
+        .preview {
+            display: block;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: normal;
+            align-items: normal;
+
+            padding: 32px;
+        }
+        .button-container {
+            margin-top: 64px;
+            max-width: 50vw;
+        }
+    }
+
     .button {
         height: 60px;
         width: 300px;
+        max-width: 100%;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -187,93 +194,120 @@
         border-right: var(--border-color) 2px solid;
         background-image: linear-gradient(to right, var(--border-color) 0%, var(--background-color-no-transp) 10%, var(--background-color-no-transp),
         var(--background-color-no-transp)90%, var(--border-color) 100%) ;
-
     }
 
-
-    .classe {
-        transform: translateY(0);
-    }
     @media (min-width: 752px) {
-        .classe:nth-child(1) {
-            transform: translateY(-100%);
+        :root {
+            --angle: 30deg;
         }
 
-        .classe:nth-child(2) {
-            transform: translateY(100%);
+
+        ul {
+            display: none;
         }
 
-        .classe:nth-child(3) {
-            transform: translateY(-100%);
+        .classe {
+            transform: translateY(0);
         }
+        @media (min-width: 850px) {
+            .classe:nth-child(1) {
+                transform: translateY(-100%);
+            }
+
+            .classe:nth-child(2) {
+                transform: translateY(100%);
+            }
+
+            .classe:nth-child(3) {
+                transform: translateY(-100%);
+            }
+        }
+
+
+        .button-container:hover + ul, ul:has(>.lang:hover), .list:hover {
+            display: block;
+        }
+
+
+        .lang {
+            color: var(--text-color);
+            list-style: none;
+            position: absolute;
+            transform: translate(var(--dx), var(--dy));
+            text-align: center;
+            top: -22px;
+            left: -30px;
+            z-index: 10;
+
+        }
+
+        .list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+        }
+
+        .list::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid green; /*rgba(255, 255, 255, 0.18);*/
+            z-index: 1;
+            left: 0;
+            top: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+         .lang::before {
+            content: '';
+            position: absolute;
+            width: var(--distance);
+            /* background-color: var(--background-color); */
+            border: 1px dotted rgba(255, 255, 255, 1); /*rgba(255, 255, 255, 0.18);*/
+            z-index: -1;
+
+            rotate: var(--angle);
+            left: -70px;
+            top: 29px;
+            transform: translateX(-50%);
+        }
+
+        /*.lang::after {
+            content: '';
+            position: absolute;
+            width: var(--distance);
+            z-index: 10;
+            opacity: 0;
+
+            height: 58px;
+            rotate: var(--angle);
+            left: -70px;
+            top: 0;
+            transform: translateX(-50%);
+        }*/
     }
 
+    @media screen and (max-width: 751px) {
+        .list {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 10px;
+        }
+        .lang {
+            color: var(--text-color);
+            list-style: none;
+            position: relative;
+            text-align: center;
+            width: 68px;
+            height: 64px;
+        }
 
-    .button-container:hover + ul, ul:has(>.lang:hover), .list:hover {
-        display: block;
+
     }
-    ul {
-        display: none;
-    }
-
-    .lang {
-        color: var(--text-color);
-        list-style: none;
-        position: absolute;
-        transform: translate(var(--dx), var(--dy));
-        text-align: center;
-        top: -22px;
-        left: -30px;
-        z-index: 10;
-
-    }
-
-    .list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-    }
-
-    .list::after {
-        content: '';
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        border: 1px solid green; /*rgba(255, 255, 255, 0.18);*/
-        z-index: 1;
-        left: 0;
-        top: 0;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        opacity: 0;
-    }
-
-     .lang::before {
-        content: '';
-        position: absolute;
-        width: var(--distance);
-        /* background-color: var(--background-color); */
-        border: 1px dotted rgba(255, 255, 255, 1); /*rgba(255, 255, 255, 0.18);*/
-        z-index: -1;
-
-        rotate: var(--angle);
-        left: -70px;
-        top: 29px;
-        transform: translateX(-50%);
-    }
-
-    /*.lang::after {
-        content: '';
-        position: absolute;
-        width: var(--distance);
-        z-index: 10;
-        opacity: 0;
-
-        height: 58px;
-        rotate: var(--angle);
-        left: -70px;
-        top: 0;
-        transform: translateX(-50%);
-    }*/
 </style>

@@ -63,6 +63,7 @@
 </div>
 
 <style>
+
     #main {
         display: flex;
         align-items: center;
@@ -77,6 +78,17 @@
         padding: 3px;
         position: absolute;
     }
+
+    @media screen and (max-width: 751px) {
+        #main {
+            border-radius: 3px;
+            margin: 10px;
+            border-right: var(--bg-color) 2px solid;
+            border-left: var(--bg-color) 2px solid;
+        }
+
+    }
+
 
     .inside {
         border: red;
