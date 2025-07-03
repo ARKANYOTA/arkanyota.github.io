@@ -116,7 +116,11 @@
     #nav-list.expanded > li > .nav-container > .nav-text-container > .nav-text {
         opacity: 0;
         width: 0;
-        transition: width 0.3s linear;
+        transition: opacity 0.3s linear, width 0.3s linear;
+    }
+
+    #nav-list.expanded > li > .nav-container > .nav-text-container {
+        pointer-events: none;
     }
 
     #nav-list.expanded > li > .nav-container:has(>.nav-image-container:hover) > .nav-text-container > .nav-text {
@@ -161,12 +165,13 @@
         filter: invert();
     }
 
-    .nav-image-container:hover > .nav-image {
+    .nav-container:hover > .nav-image-container > .nav-image {
       position: relative;
         width: 32px;
         height: 32px;
         padding: 8px;
     }
+
 
 
     .nav-image:active {
