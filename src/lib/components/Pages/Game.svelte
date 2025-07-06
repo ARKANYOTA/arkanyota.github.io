@@ -170,4 +170,20 @@
     .games:nth-child(2) {
         transform: scale(1.3) rotate(8deg);
     }
+
+    @media screen and (max-width: 700px) {
+        .games:nth-child(1) {
+            transform: scale(0.3) rotate(-5deg);
+        }
+        .games:nth-child(4) {
+            transform: scale(0.5) rotate(5deg);
+        }
+        .games:nth-child(3) {
+            transform: scale(0.6) rotate(-4deg);
+        }
+        .games:nth-child(2) {
+            transform: scale(0.9) rotate(8deg);
+        }
+
+    }
 </style>

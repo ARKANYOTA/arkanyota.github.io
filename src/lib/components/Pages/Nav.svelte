@@ -91,7 +91,7 @@
     }
 
     #navigation-bar {
-      transform: translate(-60px, -50%);
+      transform: translate(calc(-50%), -50%);
     }
 
     .nav-list {
