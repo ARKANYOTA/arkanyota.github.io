@@ -1,5 +1,6 @@
 <script>
     import WakeyWakey from "$lib/components/Eggs/WakeyWakey/WakeyWakey.svelte";
+    import Icon from "@iconify/svelte";
 
     export let title = '';
 </script>
@@ -11,6 +12,9 @@
     {:else}
         <h2 class="title title-global">{title}
         {#if title==="games"}
+            <a href="https://arkan-yota.itch.io" class="itch-link center" title="itch.io">
+                <Icon icon="cib:itch-io" width="32" height="32" />
+            </a>
             <WakeyWakey />
         {/if}</h2>
 
@@ -21,6 +25,13 @@
 </section>
 
 <style lang="css">
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 8px;
+    }
+
     .page-content {
         min-height: calc(100vh - 64px);
         height: auto;
