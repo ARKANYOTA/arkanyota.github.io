@@ -25,12 +25,9 @@
 <div class="preview">
     <div class="description">
         <p>
-            J'ai <span id="age">18</span> ans.
-            Passionné par l'informatique, je suis actuellement étudiant ingénieur en sciences du
-            numérique. <br/>
-            Mes intérêts portent sur la cybersécurité et le développement de jeux. <br/>
-            Curieux et avide d'apprendre, j'aime explorer de nouvelles technologies et relever des défis
-            complexes. <br/>
+            Étudiant en double diplôme à <span id="age">20</span> ans, je me spécialise en modélisation pour l’intelligence artificielle tout en évoluant en alternance. <br/>
+            Passionné d’informatique, j’explore aussi bien la cybersécurité que le développement de jeux vidéo. <br/>
+            Curieux et engagé, j’aime transformer les défis techniques en opportunités d’apprentissage et de création. <br/>
         </p>
     </div>
     <div class="path">
@@ -38,7 +35,7 @@
             <img src="images/aboutme/joffre.png" alt="joffre"/>
             <div class="text">
                 <p>Lycée Joffre</p>
-                <p>Baccalauréat, Informatics</p>
+                <p>Baccalauréat, Computer Science track</p>
                 <p>Sep 2019 - Jul 2022</p>
                 <p>Grade: 2nd, 1re, Tle</p>
             </div>
@@ -47,18 +44,36 @@
             <img src="images/aboutme/thiers.jpg" alt="thiers"/>
             <div class="text">
                 <p>CPGE Thiers</p>
-                <p>Grande école</p>
+                <p>Grande école : MPI</p>
                 <p>Sep 2022 - Jul 2024</p>
                 <p>Grade: Prépa</p>
             </div>
         </div>
         <div class="education" id="n7">
-            <img src="images/aboutme/n7.png" alt="thiers"/>
+            <img src="images/aboutme/n7.png" alt="n7"/>
             <div class="text">
-                <p>ENSEEIHT</p>
-                <p>Ingénieur</p>
-                <p>Sep 2022 - Jul 2025</p>
-                <p>Grade: Bac+2 to Bac+5</p>
+                <p>ENSEEIHT (INP-Toulouse)</p>
+                <p>Ingénieur: Science du numérique et Télécomunication</p>
+                <p>Sep 2024 - Feb 2028</p>
+                <p>Grade: Bac+3, Bac+4, Bac+5</p>
+            </div>
+        </div>
+        <div class="education" id="insa">
+            <img src="images/aboutme/insa.jpg" alt="insa"/>
+            <div class="text">
+                <p>INSA Toulouse</p>
+                <p>Ingénieur: Mathématiques Appliqué</p>
+                <p>Sep 2025 - Feb 2028</p>
+                <p>Grade: Bac+4, Bac+5</p>
+            </div>
+        </div>
+        <div class="education" id="thales">
+            <img src="images/aboutme/thales.jpeg" alt="thales"/>
+            <div class="text">
+                <p>Thales</p>
+                <p>Apprenticeship – Artificial Intelligence Engineering</p>
+                <p>Sep 2025 - Feb 2028</p>
+                <p></p>
             </div>
         </div>
     </div>
